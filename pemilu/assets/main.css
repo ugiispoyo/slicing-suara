@@ -520,12 +520,9 @@ body {
 }
 
 #pdkt {
-  background: top #ffffff repeat-x url("../images/pdkt/bg-pdkt.png");
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0;
-  margin: 0;
 }
 
 #pdkt h2 {
@@ -533,7 +530,6 @@ body {
   font-weight: 700;
   font-size: 30px;
   color: #e61c68;
-  margin-top: 80px;
 }
 #pdkt h5 {
   text-align: center;
@@ -548,12 +544,9 @@ body {
 }
 
 #nembak {
-  background: top #f1f1f1 repeat-x url("../images/nembak/bg-nembak.png");
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0;
-  margin: 0;
 }
 
 #nembak h2 {
@@ -561,7 +554,6 @@ body {
   font-weight: 700;
   font-size: 30px;
   color: #e61c68;
-  margin-top: 80px;
 }
 #nembak h5 {
   text-align: center;
