@@ -22,25 +22,51 @@
     <meta property="og:image" content="./2023/assets/images/jms_thumb.jpg" />
 
     <link rel="Shortcut icon" href="2022/assets/images/favicon.ico" />
-    <script src="./assets/jquery.min.js"></script>
-    <link rel="stylesheet" href="./assets/main.css" />
-    <script src="./assets/bootstrap.bundle.min.js"></script>
-    <link href="./assets/bootstrap.min.css" rel="stylesheet" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com/" />
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
     <link href="./assets/css2" rel="stylesheet" />
+
+    <!-- 
+    ==============
+      Tailwind CSS
+      documentation on https://tailwindcss.com/docs/
+      don't remove
+    -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            screens: {
+              xs: "480px",
+              sm: "576px",
+              md: "768px",
+              lg: "992px",
+              xl: "1200px",
+              x2l: "1400px",
+            },
+          },
+        },
+      };
+    </script>
+    <!-- ============== -->
+
+    <script src="./assets/bootstrap.bundle.min.js"></script>
+    <link href="./assets/bootstrap.min.css" rel="stylesheet" />
+    <script src="./assets/jquery.min.js"></script>
+    <link rel="stylesheet" href="./assets/main.css" />
   </head>
 
   <body>
-    <div id="nav">
+    <div id="nav" class="shadow-2xl">
       <nav
-        class="navbar navbar-expand-lg navbar-light bg-light fixed-top"
+        class="navbar navbar-expand-lg navbar-light bg-light fixed-top text-[#13132C]"
         aria-label="Fifth navbar example"
       >
         <div class="container">
           <a class="navbar-brand" href="#">
-            <img src="./assets/logo.svg" alt="img" width="262" height="65" />
+            <img src="./assets/logo.svg" class="h-[65px] w-auto" alt="img" />
           </a>
           <button
             class="navbar-toggler collapsed"
@@ -54,7 +80,10 @@
             <span class="navbar-toggler-icon"></span>
           </button>
 
-          <div class="navbar-collapse collapse" id="navbarsExample05" style="">
+          <div
+            class="navbar-collapse collapse max-lg:py-5"
+            id="navbarsExample05"
+          >
             <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
               <li class="nav-item mx-2">
                 <a class="nav-link" aria-current="page" href="#diary"
@@ -92,8 +121,68 @@
       </nav>
     </div>
 
-    <div id="header">
-      <img src="/assets/header.png" />
+    <div id="header" class="relative z-[9] max-lg:flex max-lg:flex-col">
+      <img src="./assets/header.png" />
+      <div
+        class="nyoblos lg:top-[80px] lg:right-[20%] lg:absolute z-10 w-[295px] h-[200px] border rounded-[10px] py-3 px-4 bg-white box-border"
+      >
+        <span class="capitalize text-[#E61C68] text-[20px] font-bold block"
+          >mENUJU pEMILU</span
+        >
+        <span class="block text-[10px] font-bold text-[#1F1B3C]"
+          >Pemungutan suara akan diadakan pada 14 Februari s.d 15 Februari
+          2024</span
+        >
+        <div class="flex justify-between items-center mt-4">
+          <div class="w-[55px]">
+            <span
+              class="text-[#1F1B3C] font-bold text-[11px] capitalize block text-center mb-1"
+              >Hari</span
+            >
+            <span
+              class="w-[55px] h-[55px] border rounded-lg flex justify-center items-center text-[35px] text-[#E61C68] font-semibold"
+            >
+              71
+            </span>
+          </div>
+          <span class="font-bold mt-4">:</span>
+          <div class="w-[55px]">
+            <span
+              class="text-[#1F1B3C] font-bold text-[11px] capitalize block text-center mb-1"
+              >Jam</span
+            >
+            <span
+              class="w-[55px] h-[55px] border rounded-lg flex justify-center items-center text-[35px] text-[#E61C68] font-semibold"
+            >
+              09
+            </span>
+          </div>
+          <span class="font-bold mt-4">:</span>
+          <div class="w-[55px]">
+            <span
+              class="text-[#1F1B3C] font-bold text-[11px] capitalize block text-center mb-1"
+              >Menit</span
+            >
+            <span
+              class="w-[55px] h-[55px] border rounded-lg flex justify-center items-center text-[35px] text-[#E61C68] font-semibold"
+            >
+              35
+            </span>
+          </div>
+          <span class="font-bold mt-4">:</span>
+          <div class="w-[55px]">
+            <span
+              class="text-[#1F1B3C] font-bold text-[11px] capitalize block text-center mb-1"
+              >Detik</span
+            >
+            <span
+              class="w-[55px] h-[55px] border rounded-lg flex justify-center items-center text-[35px] text-[#E61C68] font-semibold"
+            >
+              12
+            </span>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div id="sub-header">
@@ -121,9 +210,15 @@
           Kepoin ragam informasi seputar pemilu agar kamu siap memilih pake hati
           tanpa ragu #pemiluv
         </h5>
-        <div class="row mt-5">
-          <div class="col-lg-6 d-flex diary-content">
-            <div class="row-1 d-flex justify-content-center flex-column">
+        <div
+          class="row mt-5 max-xl:justify-center max-xl:flex max-xl:flex-col max-xl:items-center"
+        >
+          <div
+            class="col-xl-6 d-flex diary-content xl:max-h-[320px] overflow-hidden max-xl:max-w-[480px] max-xl:mb-6 max-sm:flex-col-reverse"
+          >
+            <div
+              class="row-1 d-flex justify-content-center flex-column sm:rounded-l-[10px] max-sm:rounded-b-[10px]"
+            >
               <h4>
                 Ketua KPU Pastikan Tim Gabungan Gerak Cepat Lacak Informasi
                 Kebocoran DPT
@@ -134,19 +229,26 @@
               </p>
               <span>1 Jam</span>
             </div>
-            <img src="./assets/reactangle-diary.png" />
+            <img
+              src="./assets/reactangle-diary.png"
+              class="max-sm:rounded-t-[10px]"
+            />
           </div>
-          <div class="col-lg-3 d-flex flex-column diary-content vertical">
+          <div
+            class="col-xl-3 d-flex flex-column diary-content vertical xl:max-h-[320px] overflow-hidden max-xl:max-w-[480px] max-xl:mb-6"
+          >
             <img src="./assets/diary1.png" />
-            <div class="diary-orange content">
+            <div class="diary-orange content xl:h-[201px]">
               <h4>Pesan Jokowi ke Peserta Pemilu 2024: Silakan Adu Gagasan</h4>
               <p>Pesan Jokowi ke Peserta Pemilu 2024: Silakan Adu Gagasan</p>
               <span>1 Jam</span>
             </div>
           </div>
-          <div class="col-lg-3 d-flex flex-column diary-content vertical">
+          <div
+            class="col-xl-3 d-flex flex-column diary-content vertical xl:max-h-[320px] overflow-hidden max-xl:max-w-[480px]"
+          >
             <img src="./assets/diary1.png" />
-            <div class="diary-blue content">
+            <div class="diary-blue content xl:h-[201px]">
               <h4>Pesan Jokowi ke Peserta Pemilu 2024: Silakan Adu Gagasan</h4>
               <p>Pesan Jokowi ke Peserta Pemilu 2024: Silakan Adu Gagasan</p>
               <span>1 Jam</span>
@@ -157,13 +259,149 @@
     </div>
 
     <div id="ngapel">
-      <div class="container">
-        <h2>NGAPEL</h2>
+      <div class="container py-[70px]">
+        <h2 class="mb-4">NGAPEL</h2>
         <h5>
           Jadi orang posesif itu boleh kok, sesimpel cari tau kegiatan paslon
           favoritmu #pemiluv
         </h5>
-        <div class="row">
+        <div
+          class="flex justify-between mt-[40px] max-xl:flex-col max-xl:items-center"
+        >
+          <img
+            src="./assets/pdkt-jadwal.svg"
+            class="w-full xl:max-w-[27%] max-xl:max-w-[480px] max-xl:mb-10"
+          />
+          <div class="w-full xl:max-w-[19%] max-xl:max-w-[480px] max-xl:mb-10">
+            <div class="w-full mb-3">
+              <span
+                class="text-white bg-[#EB6517] p-2 rounded-lg text-sm font-bold block mb-1"
+              >
+                14 Jun 2022 - 14 Jun 2024
+              </span>
+              <span class="text-white text-sm block"
+                >Perencanaan Program dan Anggaran</span
+              >
+            </div>
+            <div class="w-full mb-3">
+              <span
+                class="text-white bg-[#1D71B8] p-2 rounded-lg text-sm font-bold block mb-1"
+              >
+                14 Jun 2022 - 14 Jun 2024
+              </span>
+              <span class="text-white text-sm block"
+                >Perencanaan Program dan Anggaran</span
+              >
+            </div>
+            <div class="w-full mb-3">
+              <span
+                class="text-white bg-[#E37187] p-2 rounded-lg text-sm font-bold block mb-1"
+              >
+                14 Jun 2022 - 14 Jun 2024
+              </span>
+              <span class="text-white text-sm block"
+                >Perencanaan Program dan Anggaran</span
+              >
+            </div>
+            <div class="w-full mb-3">
+              <span
+                class="text-white bg-[#A3195B] p-2 rounded-lg text-sm font-bold block mb-1"
+              >
+                14 Jun 2022 - 14 Jun 2024
+              </span>
+              <span class="text-white text-sm block"
+                >Perencanaan Program dan Anggaran</span
+              >
+            </div>
+          </div>
+
+          <div class="w-full xl:max-w-[19%] max-xl:max-w-[480px] max-xl:mb-10">
+            <div class="w-full mb-3">
+              <span
+                class="text-white bg-[#A3195B] p-2 rounded-lg text-sm font-bold block mb-1"
+              >
+                14 Jun 2022 - 14 Jun 2024
+              </span>
+              <span class="text-white text-sm block"
+                >Perencanaan Program dan Anggaran</span
+              >
+            </div>
+            <div class="w-full mb-3">
+              <span
+                class="text-white bg-[#EB6517] p-2 rounded-lg text-sm font-bold block mb-1"
+              >
+                14 Jun 2022 - 14 Jun 2024
+              </span>
+              <span class="text-white text-sm block"
+                >Perencanaan Program dan Anggaran</span
+              >
+            </div>
+            <div class="w-full mb-3">
+              <span
+                class="text-white bg-[#1D71B8] p-2 rounded-lg text-sm font-bold block mb-1"
+              >
+                14 Jun 2022 - 14 Jun 2024
+              </span>
+              <span class="text-white text-sm block"
+                >Perencanaan Program dan Anggaran</span
+              >
+            </div>
+            <div class="w-full mb-3">
+              <span
+                class="text-white bg-[#E37187] p-2 rounded-lg text-sm font-bold block mb-1"
+              >
+                14 Jun 2022 - 14 Jun 2024
+              </span>
+              <span class="text-white text-sm block"
+                >Perencanaan Program dan Anggaran</span
+              >
+            </div>
+          </div>
+
+          <div class="w-full xl:max-w-[19%] max-xl:max-w-[480px] max-xl:mb-10">
+            <div class="w-full mb-3">
+              <span
+                class="text-white bg-[#E37187] p-2 rounded-lg text-sm font-bold block mb-1"
+              >
+                14 Jun 2022 - 14 Jun 2024
+              </span>
+              <span class="text-white text-sm block"
+                >Perencanaan Program dan Anggaran</span
+              >
+            </div>
+            <div class="w-full mb-3">
+              <span
+                class="text-white bg-[#1D71B8] p-2 rounded-lg text-sm font-bold block mb-1"
+              >
+                14 Jun 2022 - 14 Jun 2024
+              </span>
+              <span class="text-white text-sm block"
+                >Perencanaan Program dan Anggaran</span
+              >
+            </div>
+            <div class="w-full mb-3">
+              <span
+                class="text-white bg-[#A3195B] p-2 rounded-lg text-sm font-bold block mb-1"
+              >
+                14 Jun 2022 - 14 Jun 2024
+              </span>
+              <span class="text-white text-sm block"
+                >Perencanaan Program dan Anggaran</span
+              >
+            </div>
+            <div class="w-full mb-3">
+              <span
+                class="text-white bg-[#EB6517] p-2 rounded-lg text-sm font-bold block mb-1"
+              >
+                14 Jun 2022 - 14 Jun 2024
+              </span>
+              <span class="text-white text-sm block"
+                >Perencanaan Program dan Anggaran</span
+              >
+            </div>
+          </div>
+        </div>
+        <!-- <div class="row">
           <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
@@ -175,7 +413,7 @@
             and more recently with desktop publishing software like Aldus
             PageMaker including versions of Lorem Ipsum.
           </p>
-        </div>
+        </div> -->
       </div>
     </div>
 
@@ -186,7 +424,7 @@
           Tak kenal maka tak sayang, Yuk cari tau visi misi dari paslon
           favoritmu! #pemiluv
         </h5>
-        <div class="row">
+        <!-- <div class="row">
           <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
@@ -198,7 +436,7 @@
             and more recently with desktop publishing software like Aldus
             PageMaker including versions of Lorem Ipsum.
           </p>
-        </div>
+        </div> -->
       </div>
     </div>
 
@@ -209,7 +447,7 @@
           Poling dan utarakan isi perasaan kamu, lewat fitur sampaikan perasaan
           lewat online pake hati #pemiluv
         </h5>
-        <div class="row">
+        <!-- <div class="row">
           <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
@@ -221,7 +459,7 @@
             and more recently with desktop publishing software like Aldus
             PageMaker including versions of Lorem Ipsum.
           </p>
-        </div>
+        </div> -->
       </div>
     </div>
 
