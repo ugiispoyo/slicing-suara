@@ -414,14 +414,22 @@
           favoritmu! #pemiluv
         </h5>
         <div class="w-full max-w-[1180px]">
-          <div class="flex justify-between max-xl:flex-col max-xl:items-center mt-5">
-            <div class="xl:w-[32%] max-xl:mb-5 max-xl:max-w-[480px] w-full bg-white rounded-lg border">
+          <div
+            class="flex justify-between max-xl:flex-col max-xl:items-center mt-5"
+          >
+            <div
+              class="xl:w-[32%] max-xl:mb-5 max-xl:max-w-[480px] w-full bg-white rounded-lg border"
+            >
               <img src="./assets/anis.svg" class="w-full" />
             </div>
-            <div class="xl:w-[32%] max-xl:mb-5 max-xl:max-w-[480px] w-full bg-white rounded-lg border">
+            <div
+              class="xl:w-[32%] max-xl:mb-5 max-xl:max-w-[480px] w-full bg-white rounded-lg border"
+            >
               <img src="./assets/prabowo.svg" class="w-full" />
             </div>
-            <div class="xl:w-[32%] max-xl:mb-5 max-xl:max-w-[480px] w-full bg-white rounded-lg border">
+            <div
+              class="xl:w-[32%] max-xl:mb-5 max-xl:max-w-[480px] w-full bg-white rounded-lg border"
+            >
               <img src="./assets/ganjar.svg" class="w-full" />
             </div>
           </div>
@@ -429,20 +437,152 @@
       </div>
     </div>
 
-    <div id="nembak">
+    <div id="nembak" class="bg-[#f1f1f1]">
       <div
-        class="w-full py-[70px] bg-[url('./assets/bg-nembak.svg')] xl:bg-no-repeat xl:bg-cover bg-contain relative top-[-16px]"
+        class="w-full flex items-center relative flex-col px-4 py-[50px] max-xs:py-[30px] bg-[url('./assets/bg-nembak.svg')] xl:bg-no-repeat xl:bg-cover bg-contain relative top-[-16px]"
       >
+        <img
+          src="./assets/img-side-l-nembak.svg"
+          class="w-[50px] absolute left-0 bottom-[80px] max-xl:hidden"
+        />
+        <img
+          src="./assets/img-side-r-nembak.svg"
+          class="w-[50px] absolute right-0 bottom-[310px] max-xl:hidden"
+        />
         <h2 class="mb-4">NEMBAK</h2>
-        <h5>
+        <h5 class="max-xs:text-sm">
           Poling dan utarakan isi perasaan kamu, lewat fitur sampaikan perasaan
           lewat online pake hati #pemiluv
         </h5>
+        <div
+          class="w-full max-w-[1180px] flex justify-between mt-5 max-xl:flex-col max-xl:items-center"
+        >
+          <div
+            class="bg-[#66C3CA] max-w-[32%] rounded-lg px-5 py-4 flex items-start w-full max-xl:max-w-[480px] max-xl:mb-5"
+          >
+            <input type="radio" name="nembak" class="mr-4 mt-2" />
+            <span class="text-[#12111E] text-lg max-xs:text-xs font-bold"
+              >1. Anies Baswedan & Muhaimin Iskandar</span
+            >
+          </div>
+          <div
+            class="bg-[#66C3CA] max-w-[32%] rounded-lg px-5 py-4 flex items-start w-full max-xl:max-w-[480px] max-xl:mb-5"
+          >
+            <input type="radio" name="nembak" class="mr-4 mt-2" />
+            <span class="text-[#12111E] text-lg max-xs:text-xs font-bold"
+              >2. Prabowo Subianto & Gibran Rakabuming
+            </span>
+          </div>
+          <div
+            class="bg-[#66C3CA] max-w-[32%] rounded-lg px-5 py-4 flex items-start w-full max-xl:max-w-[480px] max-xl:mb-5"
+          >
+            <input type="radio" name="nembak" class="mr-4 mt-2" />
+            <span class="text-[#12111E] text-lg max-xs:text-xs font-bold"
+              >3. Ganjar Pranowo & Mahfud MD
+            </span>
+          </div>
+        </div>
+
+        <button
+          class="w-full max-w-[372px] mx-auto font-bold text-lg text-white bg-[#E61C68] text-center rounded-[40px] xs:mt-5 lg:py-4 max-lg:py-3 max-lg:max-w-[300px] max-lg:text-base max-xs:py-2 max-xs:max-w-[250px] max-xs:text-sm max-xs:mt-2"
+        >
+          Pilih Pasangan
+        </button>
+
+        <div
+          class="w-full max-w-[1180px] flex justify-center flex-col items-center mt-5 relative"
+        >
+          <div
+            class="flex flex-col w-full max-w-[1100px] max-lg:max-w-[550px] xs:mb-8 max-xs:mb-5"
+          >
+            <div
+              class="w-full h-[140px] max-lg:h-[50px] max-xs:h-[40px] relative bg-[#E61C68] rounded-[10px] flex justify-between"
+            >
+              <img
+                src="./assets/poling-anis.svg"
+                class="h-[191px] max-lg:h-[70px] max-xs:h-[60px] w-auto relative max-lg:top-[-20px] top-[-51px] xl:mr-4"
+              />
+              <div class="flex items-center relative">
+                <img
+                  src="./assets/like.svg"
+                  class="w-[50px] max-lg:w-[20px] max-xs:w-[16px] h-auto xl:mr-10 xs:mr-4 max-xs:mr-2"
+                />
+                <div class="flex flex-col text-white xl:pr-[50px] pr-4">
+                  <span
+                    class="text-[30px] max-lg:text-[16px] block font-bold max-xs:text-xs"
+                    >357832222</span
+                  >
+                  <span
+                    class="text-xl max-lg:text-sm text-white font-bold max-xs:text-[10px]"
+                    >Suara</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="flex flex-col w-full max-w-[1100px] max-lg:max-w-[550px] xs:mb-8 max-xs:mb-5"
+          >
+            <div
+              class="w-full h-[140px] max-lg:h-[50px] max-xs:h-[40px] relative bg-[#E61C68] rounded-[10px] flex justify-between"
+            >
+              <img
+                src="./assets/poling-prabowo.svg"
+                class="h-[191px] max-lg:h-[70px] max-xs:h-[60px] w-auto relative max-lg:top-[-20px] top-[-51px] xl:mr-4"
+              />
+              <div class="flex items-center relative">
+                <img
+                  src="./assets/like.svg"
+                  class="w-[50px] max-lg:w-[20px] max-xs:w-[16px] h-auto xl:mr-10 xs:mr-4 max-xs:mr-2"
+                />
+                <div class="flex flex-col text-white xl:pr-[50px] pr-4">
+                  <span
+                    class="text-[30px] max-lg:text-[16px] block font-bold max-xs:text-xs"
+                    >357832222</span
+                  >
+                  <span
+                    class="text-xl max-lg:text-sm text-white font-bold max-xs:text-[10px]"
+                    >Suara</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="flex flex-col w-full max-w-[1100px] max-lg:max-w-[550px] xs:mb-8 max-xs:mb-5"
+          >
+            <div
+              class="w-full h-[140px] max-lg:h-[50px] max-xs:h-[40px] relative bg-[#E61C68] rounded-[10px] flex justify-between"
+            >
+              <img
+                src="./assets/poling-ganjar.svg"
+                class="h-[191px] max-lg:h-[70px] max-xs:h-[60px] w-auto relative max-lg:top-[-20px] top-[-51px] xl:mr-4"
+              />
+              <div class="flex items-center relative">
+                <img
+                  src="./assets/like.svg"
+                  class="w-[50px] max-lg:w-[20px] max-xs:w-[16px] h-auto xl:mr-10 xs:mr-4 max-xs:mr-2"
+                />
+                <div class="flex flex-col text-white xl:pr-[50px] pr-4">
+                  <span
+                    class="text-[30px] max-lg:text-[16px] block font-bold max-xs:text-xs"
+                    >357832222</span
+                  >
+                  <span
+                    class="text-xl max-lg:text-sm text-white font-bold max-xs:text-[10px]"
+                    >Suara</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
+    <div class="min-[992px]:h-[130px] h-[0px] w-full"></div>
     <div id="stories">
-      <div class="container">
+      <div class="container py-[40px]">
         <h2 class="mb-4">STORIES</h2>
         <h5>Kepoin beberapa konten video dari paslon kesayangan #pemilu</h5>
         <div class="row">
@@ -513,22 +653,88 @@
             </div>
           </div>
         </div>
-        <div style="margin-top: 40px">
-          <a href="#">
-            <div class="detail">DETAIL</div>
-          </a>
+        <a href="#" class="mt-[40px] flex w-full justify-center mb-[20px]">
+          <div class="detail py-3 rounded-[20px]">LIHAT SEMUA</div>
+        </a>
+      </div>
+    </div>
+    <div class="min-[992px]:h-[130px] h-[0px] w-full"></div>
+
+    <div id="footer-menu">
+      <div class="w-full flex items-center flex-col px-4">
+        <div
+          class="w-full max-w-[1180px] flex justify-between min-h-[72px] max-lg:min-h-[130px] max-lg:py-4 items-center max-xs:flex-col"
+        >
+          <div class="flex-none min-[1000px]:w-[60%] max-xs:w-full">
+            <ul
+              class="text-white text-sm font-bold w=full flex max-lg:flex-col"
+            >
+              <li
+                class="lg:border-r-[2px] lg:border-white pr-2 mr-2 max-lg:mb-2"
+              >
+                <a href="#"> Redaksi </a>
+              </li>
+              <li
+                class="lg:border-r-[2px] lg:border-white pr-2 mr-2 max-lg:mb-2"
+              >
+                <a href="#"> Kontak </a>
+              </li>
+              <li
+                class="lg:border-r-[2px] lg:border-white pr-2 mr-2 max-lg:mb-2"
+              >
+                <a href="#"> Tentang Kami </a>
+              </li>
+              <li
+                class="lg:border-r-[2px] lg:border-white pr-2 mr-2 max-lg:mb-2"
+              >
+                <a href="#"> Karir </a>
+              </li>
+              <li
+                class="lg:border-r-[2px] lg:border-white pr-2 mr-2 max-lg:mb-2"
+              >
+                <a href="#"> Pedoman Media Siber </a>
+              </li>
+              <li class="mr-2">
+                <a href="#"> Site Map </a>
+              </li>
+            </ul>
+          </div>
+          <div
+            class="flex-none min-[1000px]:w-[40%] flex justify-between items-center max-xs:w-full"
+          >
+            <img
+              src="./assets/img-footer.svg"
+              class="h-full w-auto max-[1065px]:hidden max-md:w-[0px]"
+            />
+
+            <ul
+              class="text-white text-sm font-bold w-full flex xs:ml-5 justify-end max-xs:justify-start max-xs:mt-5"
+            >
+              <li class="mr-2 flex-none">
+                <a href="#">
+                  <img src="./assets/ig.svg" class="w-[25px] h-auto" />
+                </a>
+              </li>
+              <li class="mr-2 flex-none">
+                <a href="#">
+                  <img src="./assets/tw.svg" class="w-[25px] h-auto" />
+                </a>
+              </li>
+              <li class="mr-2 flex-none">
+                <a href="#">
+                  <img src="./assets/tiktok.svg" class="w-[25px] h-auto" />
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
 
-    <div id="footer-menu">
-      <div class="container">
-        <div class="row">test</div>
-      </div>
-    </div>
-
-    <div class="copyright">
-      <p>© 2023 SUARA.COM - ALL RIGHTS RESERVED.</p>
+    <div class="bg-white h-[50px] flex items-center justify-center">
+      <p class="text-center text-xs text-black">
+        © 2023 SUARA.COM - ALL RIGHTS RESERVED.
+      </p>
     </div>
   </body>
 </html>

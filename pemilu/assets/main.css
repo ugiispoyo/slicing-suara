@@ -204,10 +204,8 @@ body {
 
 #stories .detail {
   border: 1px solid #3c3c3b;
-  padding: 5px;
   color: #3c3c3b;
   font-weight: 700;
-  border-radius: 12px;
   text-align: center;
   width: 100%;
   max-width: 235px;
@@ -582,7 +580,6 @@ body {
   font-weight: 700;
   font-size: 30px;
   color: #e61c68;
-  margin-top: 140px;
 }
 
 #stories h3 {
@@ -731,7 +728,6 @@ body {
 #footer-menu {
   background-color: #e61c68;
   color: #ffffff;
-  margin-top: 140px;
 }
 
 #wa .fly-wa-bottom {
