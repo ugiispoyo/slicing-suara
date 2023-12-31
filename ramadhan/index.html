@@ -26,10 +26,29 @@
               water: "#D6F5FC",
               urobilin: "#E4BC27",
               quicksilver: "#A6A6A6",
+              eerieblack: "#1E1E1E",
             },
             screens: {
-              xxs: "390px",
+              "2xs": "390px",
+              // => @media (min-width: 390px) { ... }
+
               xs: "480px",
+              // => @media (min-width: 480px) { ... }
+
+              sm: "640px",
+              // => @media (min-width: 640px) { ... }
+
+              md: "768px",
+              // => @media (min-width: 768px) { ... }
+
+              lg: "1024px",
+              // => @media (min-width: 1024px) { ... }
+
+              xl: "1280px",
+              // => @media (min-width: 1280px) { ... }
+
+              "2xl": "1536px",
+              // => @media (min-width: 1536px) { ... }
             },
           },
         },
@@ -378,16 +397,16 @@
     </section>
 
     <!-- Kebaikan -->
-    <section class="w-full py-[20px]">
+    <section class="w-full pt-[20px]">
       <div class="bg-sandstorm w-full py-[20px] sm:px-[20px]">
         <div
           class="bg-[url('./assets/images/home/bg-kebaikan.svg')] bg-cover bg-repeat w-full flex justify-center items-center flex-col pb-5"
         >
           <span
-            class="text-center block sm:text-sm text-[#1E1E1E] font-bold text-xs mb-2 pt-[30px] max-sm:pt-[20px]"
+            class="text-center block sm:text-sm text-eerieblack font-bold text-xs mb-2 pt-[30px] max-sm:pt-[20px]"
             >#BersuaRamadhanBersama</span
           >
-          <img src="./assets/images/home/kebaikan.svg" class="h-[60px]" />
+          <img src="./assets/images/home/kebaikan.svg" class="h-[60px] px-5" />
           <div
             class="px-4 min-h-[200px] w-full items-center max-lg:justify-center max-w-[1050px] flex flex-wrap mt-4 relative"
           >
@@ -457,6 +476,135 @@
                   selama ramadhan yang bisa kamu download secara gratisan
                 </p>
               </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hiburan -->
+    <section class="w-full pb-[20px]">
+      <div
+        class="bg-[url('./assets/images/home/bg-hiburan.png')] bg-cover bg-repeat w-full flex justify-center items-center flex-col pb-10"
+      >
+        <span
+          class="text-center block sm:text-sm text-junglegreen font-bold text-xs mb-2 pt-[30px] max-sm:pt-[20px]"
+          >#BersuaRamadhanBersama</span
+        >
+        <img src="./assets/images/home/hiburan.svg" class="h-[60px] px-5" />
+        <div
+          class="px-4 min-h-[200px] w-full items-center max-lg:justify-center max-w-[1050px] flex flex-wrap mt-4 relative"
+        >
+          <div
+            class="py-4 px-4 w-full sm:max-w-[49%] max-sm:mx-2 max-xs:mx-0 max-sm:px-2 rounded-[10px]"
+          >
+            <a
+              href="#"
+              class="flex w-full flex-col items-center justify-center max-xs:min-h-[250px]"
+            >
+              <img
+                src="./assets/images/home/hiburan-tontonan.svg"
+                class="w-full h-auto"
+              />
+            </a>
+          </div>
+          <div
+            class="py-4 px-4 w-full sm:max-w-[49%] max-sm:mx-2 max-xs:mx-0 max-sm:px-2 rounded-[10px]"
+          >
+            <a
+              href="#"
+              class="flex w-full flex-col items-center justify-center max-xs:min-h-[250px]"
+            >
+              <img
+                src="./assets/images/home/hiburan-kurma.svg"
+                class="w-full h-auto"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Komunitas -->
+    <section class="w-full pb-[20px]">
+      <div
+        class="bg-white w-full flex justify-center items-center flex-col pb-10"
+      >
+        <span
+          class="text-center text-eerieblack block sm:text-sm font-bold text-xs mb-2 pt-[30px] max-sm:pt-[20px]"
+          >#BersuaRamadhanBersama</span
+        >
+        <img src="./assets/images/home/komunitas.svg" class="h-[60px] px-5" />
+        <div
+          class="px-4 min-h-[200px] w-full items-center justify-center max-lg:justify-center max-w-[1050px] flex flex-wrap mt-[40px] relative"
+        >
+          <div
+            class="py-4 px-4 w-full lg:max-w-[49%] max-sm:mx-2 max-xs:mx-0 max-sm:px-2"
+          >
+            <div
+              class="bg-primary min-h-[200px] w-full flex items-center rounded-[10px] pr-4 py-4"
+            >
+              <img
+                src="./assets/images/home/komunitas-2.png"
+                class="lg:h-[300px] h-[200px] w-auto mr-6"
+              />
+              <div class="flex flex-col">
+                <h3
+                  class="uppercase text-white sm:text-[26px] text-base mb-2 font-bold leading-[30px]"
+                >
+                  WAKTUNYA COMMUNITIMES
+                </h3>
+                <p class="text-white text-sm">
+                  Kumpul bareng dengan konten insightful seperti workshop serta
+                  ngabuburit bareng komunitas selama ramadan
+                  <br />
+                  <br />
+                  Lokasi : Cafe / Public space Konten: Talkshow, workshop, games
+                  dll
+                </p>
+                <a
+                  href="#"
+                  class="text-primary text-sm bg-sandstorm rounded-[10px] py-2 px-5 uppercase font-bold mt-4 max-w-[100px] text-center block"
+                >
+                  detail
+                </a>
+              </div>
+            </div>
+          </div>
+          <div
+            class="py-4 px-4 w-full lg:max-w-[49%] max-sm:mx-2 max-xs:mx-0 max-sm:px-2"
+          >
+            <div
+              class="bg-primary min-h-[200px] w-full flex items-center rounded-[10px] pr-4 py-4"
+            >
+              <img
+                src="./assets/images/home/komunitas-1.png"
+                class="lg:h-[300px] h-[200px] w-auto mr-6"
+              />
+              <div class="flex flex-col">
+                <h3
+                  class="uppercase text-white sm:text-[26px] text-base mb-2 font-bold leading-[30px]"
+                >
+                  TGIF
+                  <i class="sm:text-[20px] text-sm"
+                    >(TAKJIL GRATIS IN FRIDAY)</i
+                  >
+                </h3>
+                <p class="text-white text-sm">
+                  Seru-seruan bareng komunitas serta berbagi hiburan selama
+                  ramadhan
+                  <br />
+                  <br />
+                  Lokasi : 4 Titik (Public Space) Konten: Ngamen, Ngaji,
+                  Ngabuburit (Gambar Berbagi Takjil & Diskusi)
+                </p>
+                <a
+                  href="#"
+                  class="text-primary text-sm bg-sandstorm rounded-[10px] py-2 px-5 uppercase font-bold mt-4 max-w-[100px] text-center block"
+                >
+                  detail
+                </a>
+              </div>
             </div>
           </div>
         </div>
