@@ -25,71 +25,136 @@
               sandstorm: "#F4CE3F",
               water: "#D6F5FC",
               urobilin: "#E4BC27",
+              quicksilver: "#A6A6A6",
             },
           },
         },
       };
     </script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <!-- Navbar -->
-    <nav class="w-full flex justify-center fixed h-[80px] items-center bg-white">
-      <div class="w-full max-w-[700px] px-4">
-        <ul
-          class="flex w-full justify-between text-primary font-bold capitalize items-center"
+    <nav
+      class="bg-white fixed flex items-center justify-center w-full z-[99] border-b border-[#f1f1f1]"
+    >
+      <div
+        class="w-full h-[70px] max-w-[770px] flex max-md:flex-wrap items-center justify-center max-md:justify-between md:px-4 relative"
+      >
+        <a
+          href="#"
+          class="md:w-full h-[70px] flex items-center md:max-w-[150px]"
         >
-          <li class="w-full max-w-[150px]">
-            <a href="#">
-              <img src="./assets/icons/home.svg" class="w-[27px] h-auto" />
-            </a>
-          </li>
-          <li class="w-full max-w-[150px]">
-            <a href="#"> kebaikan </a>
-          </li>
-          <li class="w-full max-w-[150px]">
-            <a href="#"> Hiburan </a>
-          </li>
-          <li class="w-full max-w-[150px]">
-            <a href="#"> Communitimes </a>
-          </li>
-          <li class="w-full max-w-[150px] flex justify-end">
-            <a href="#">
-              <img src="./assets/icons/search.svg" class="w-[27px] h-auto" />
-            </a>
-          </li>
-        </ul>
+          <img
+            src="./assets/icons/home.svg"
+            class="w-[27px] h-auto max-md:ml-4"
+          />
+        </a>
+        <a href="#" class="hidden max-md:flex max-md:items-center max-md:mr-4 absolute max-md:right-[50px]">
+          <img
+            src="./assets/icons/search.svg"
+            class="w-[27px] h-auto max-md:w-[20px]"
+          />
+        </a>
+        <button
+          data-collapse-toggle="navbar-default"
+          type="button"
+          class="inline-flex h-[70px] flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden max-md:mr-4"
+          aria-controls="navbar-default"
+          aria-expanded="false"
+        >
+          <span class="sr-only">Open main menu</span>
+          <svg
+            class="w-5 h-5"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 17 14"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M1 1h15M1 7h15M1 13h15"
+            />
+          </svg>
+        </button>
+        <div
+          class="hidden w-full md:block bg-white max-md:shadow-md"
+          id="navbar-default"
+        >
+          <ul
+            class="text-primary font-bold w-full text-base flex flex-col p-4 md:p-0 rounded-lg md:flex-row"
+          >
+            <li class="w-full max-w-[150px] max-md:mb-4">
+              <a href="#"> kebaikan </a>
+            </li>
+            <li class="w-full max-w-[150px] max-md:mb-4">
+              <a href="#"> Hiburan </a>
+            </li>
+            <li class="w-full max-w-[150px] max-md:mb-4">
+              <a href="#"> Communitimes </a>
+            </li>
+            <li
+              class="w-full max-w-[150px] flex justify-end max-md:justify-start max-md:mb-4 max-md:hidden"
+            >
+              <a href="#">
+                <img src="./assets/icons/search.svg" class="w-[27px] h-auto" />
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </nav>
 
     <!-- Header -->
     <header class="w-full">
-      <div class="pt-[80px]">
+      <div class="pt-[70px]">
         <img src="assets/images/home/banner-header.svg" class="w-full h-auto" />
       </div>
     </header>
 
     <!-- Banner Kegiatan -->
     <section class="w-full flex justify-center">
-      <div class="px-4 w-full min-h-[300px] items-center max-w-[770px] flex justify-between">
+      <div
+        class="px-4 w-full min-h-[300px] items-center max-w-[770px] flex justify-between max-md:flex-col"
+      >
         <a href="#">
           <img
             src="assets/images/home/banner-kebaikan.svg"
-            class="w-full max-w-[230px] h-auto"
+            class="w-full max-w-[230px] h-auto max-md:my-4 max-md:max-w-[200px]"
           />
         </a>
         <a href="#">
           <img
             src="assets/images/home/banner-hiburan.svg"
-            class="w-full max-w-[230px] h-auto"
+            class="w-full max-w-[230px] h-auto max-md:my-4 max-md:max-w-[200px]"
           />
         </a>
         <a href="#">
           <img
             src="assets/images/home/banner-komunitas.svg"
-            class="w-full max-w-[230px] h-auto"
+            class="w-full max-w-[230px] h-auto max-md:my-4 max-md:max-w-[200px]"
           />
         </a>
       </div>
     </section>
+
+    <!-- Newstag -->
+    <section class="w-full flex justify-center flex-col">
+      <h2
+        class="uppercase px-4 text-primary mt-3 block text-center font-bold text-xl mb-1"
+      >
+        Spesial newstag
+      </h2>
+      <span class="text-center block">#RAMADHAN2024</span>
+      <div class="px-4 w-full items-center max-w-[770px] flex mt-6"></div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
   </body>
 </html>
