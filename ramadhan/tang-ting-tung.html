@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ramadhan - Zakat</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link href="./assets/css/style.css" rel="stylesheet" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#1D55A0",
+              junglegreen: "#27B092",
+              sandstorm: "#F4CE3F",
+              water: "#D6F5FC",
+              urobilin: "#E4BC27",
+              quicksilver: "#A6A6A6",
+              eerieblack: "#1E1E1E",
+            },
+            screens: {
+              "2xs": "390px",
+              // => @media (min-width: 390px) { ... }
+
+              xs: "480px",
+              // => @media (min-width: 480px) { ... }
+
+              sm: "640px",
+              // => @media (min-width: 640px) { ... }
+
+              md: "768px",
+              // => @media (min-width: 768px) { ... }
+
+              lg: "1024px",
+              // => @media (min-width: 1024px) { ... }
+
+              xl: "1280px",
+              // => @media (min-width: 1280px) { ... }
+
+              "2xl": "1536px",
+              // => @media (min-width: 1536px) { ... }
+            },
+          },
+        },
+      };
+    </script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav
+      class="bg-white fixed flex items-center justify-center w-full z-[99] border-b border-[#f1f1f1]"
+    >
+      <div
+        class="w-full h-[70px] max-w-[770px] flex max-md:flex-wrap items-center justify-center max-md:justify-between md:px-4 relative"
+      >
+        <a
+          href="#"
+          class="md:w-full h-[70px] flex items-center md:max-w-[150px]"
+        >
+          <img
+            src="./assets/icons/home.svg"
+            class="w-[27px] h-auto max-md:ml-4"
+          />
+        </a>
+        <a
+          href="#"
+          class="hidden max-md:flex max-md:items-center max-md:mr-4 absolute max-md:right-[50px]"
+        >
+          <img
+            src="./assets/icons/search.svg"
+            class="w-[27px] h-auto max-md:w-[20px]"
+          />
+        </a>
+        <button
+          data-collapse-toggle="navbar-default"
+          type="button"
+          class="inline-flex h-[70px] flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden max-md:mr-4"
+          aria-controls="navbar-default"
+          aria-expanded="false"
+        >
+          <span class="sr-only">Open main menu</span>
+          <svg
+            class="w-5 h-5"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 17 14"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M1 1h15M1 7h15M1 13h15"
+            />
+          </svg>
+        </button>
+        <div
+          class="hidden w-full md:block bg-white max-md:shadow-md"
+          id="navbar-default"
+        >
+          <ul
+            class="text-primary capitalize font-bold w-full text-base flex flex-col p-4 md:p-0 rounded-lg md:flex-row"
+          >
+            <li class="w-full max-w-[150px] max-md:mb-4">
+              <a href="#"> kebaikan </a>
+            </li>
+            <li class="w-full max-w-[150px] max-md:mb-4">
+              <a href="#"> Hiburan </a>
+            </li>
+            <li class="w-full max-w-[150px] max-md:mb-4">
+              <a href="#"> Communitimes </a>
+            </li>
+            <li
+              class="w-full max-w-[150px] flex justify-end max-md:justify-start max-md:mb-4 max-md:hidden"
+            >
+              <a href="#">
+                <img src="./assets/icons/search.svg" class="w-[27px] h-auto" />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="w-full relative">
+      <div class="pt-[70px]">
+        <img
+          src="assets/images/tang-ting-tung/banner-header.svg"
+          class="w-full h-auto"
+        />
+      </div>
+    </header>
+
+    <!-- Tang ting tung -->
+    <section
+      class="w-full flex justify-center flex-col max-w-[750px] py-[50px] px-4 mx-auto"
+    >
+      <div class="w-full flex h-[45px] items-center">
+        <div
+          class="bg-[#EC5469] h-full flex text-white px-6 max-md:px-4 max-xs:px-2 items-center rounded-l-[10px] w-[75%] max-md:w-[70%] max-xs:w-[65%]"
+        >
+          <h1 class="text-[22px] max-md:text-base max-xs:text-sm font-bold">
+            Tabel Perhitungan Zakat
+          </h1>
+        </div>
+        <div
+          class="bg-[#F6CE3F] h-full flex text-white px-6 max-md:px-4 max-xs:px-2 justify-end items-center rounded-r-[10px] w-[25%] max-md:w-[30%] max-xs:w-[35%]"
+        >
+          <button
+            class="text-lg max-md:text-xs font-bold text-[#242B5B] capitalize w-full h-full"
+          >
+            reset form
+          </button>
+        </div>
+      </div>
+
+      <div class="w-full flex flex-col overflow-x-scroll border-box pb-4">
+        <div
+          class="w-[715px] mx-auto flex-none flex h-[45px] items-center bg-[#EBEBEB] rounded-lg mt-6 mb-4"
+        >
+          <span class="text-[#242B5B] text-xs font-semibold mx-4"
+            >I. Penghasilan/Pemasukan</span
+          >
+        </div>
+        <div class="w-[715px] flex flex-none mb-4 items-center">
+          <span class="block w-[400px] text-[#242B5B] text-[11px] ml-4"
+            >. Pendapatan (Gaji/Perbulan)</span
+          >
+          <input
+            type="number"
+            class="border-0 outline-0 ring-0 focus:outline-0 focus:ring-0 focus:border-0 w-[315px] h-[45px] bg-[#EBEBEB] rounded-lg"
+            value="0"
+          />
+        </div>
+        <div class="w-[715px] flex flex-none mb-4 items-center">
+          <span class="block w-[400px] text-[#242B5B] text-[11px] ml-4"
+            >. Pendapatan Lain-lain(/Bulan)</span
+          >
+          <input
+            type="number"
+            class="border-0 outline-0 ring-0 focus:outline-0 focus:ring-0 focus:border-0 w-[315px] h-[45px] bg-[#EBEBEB] rounded-lg"
+            value="0"
+          />
+        </div>
+        <div class="w-[715px] flex flex-none mb-4 items-center">
+          <span class="block w-[400px] text-[#242B5B] text-[11px] ml-4"
+            >. Hutang/Cicilan/Pengeluaran Rutin Kebutuhan Pokok (/Bulan)</span
+          >
+          <input
+            type="number"
+            class="border-0 outline-0 ring-0 focus:outline-0 focus:ring-0 focus:border-0 w-[315px] h-[45px] bg-[#EBEBEB] rounded-lg"
+            value="0"
+          />
+        </div>
+        <div class="w-[715px] flex flex-none mb-4 items-center">
+          <span
+            class="block w-[400px] text-[#242B5B] text-[11px] ml-4 font-bold text-right pr-6"
+            >Pemasukan/Pendapatan per Bulan</span
+          >
+          <input
+            type="number"
+            class="border-0 outline-0 ring-0 focus:outline-0 focus:ring-0 focus:border-0 w-[315px] h-[45px] bg-[#EBEBEB] rounded-lg"
+            value="0"
+          />
+        </div>
+
+        <div
+          class="w-[715px] mx-auto flex-none flex h-[45px] items-center bg-[#EBEBEB] rounded-lg mt-6 mb-4"
+        >
+          <span class="text-[#242B5B] text-xs font-semibold mx-4"
+            >II. Zakat Profesi (Az-Zira'ah)</span
+          >
+        </div>
+        <div class="w-[715px] flex flex-none mb-4 items-center">
+          <span class="block w-[400px] text-[#242B5B] text-[11px] ml-4"
+            >. Harga beras saat ini (/Kg)</span
+          >
+          <input
+            type="number"
+            class="border-0 outline-0 ring-0 focus:outline-0 focus:ring-0 focus:border-0 w-[315px] h-[45px] bg-[#EBEBEB] rounded-lg"
+            value="0"
+          />
+        </div>
+        <div class="w-[715px] flex flex-none mb-4 items-center">
+          <span class="block w-[400px] text-[#242B5B] text-[11px] ml-4"
+            >. Besarnya nishab</span
+          >
+          <input
+            type="number"
+            class="border-0 outline-0 ring-0 focus:outline-0 focus:ring-0 focus:border-0 w-[315px] h-[45px] bg-[#EBEBEB] rounded-lg"
+            value="0"
+          />
+        </div>
+        <div class="w-[715px] flex flex-none mb-4 items-center">
+          <span class="block w-[400px] text-[#242B5B] text-[11px] ml-4"
+            >. Wajib membayar zakat profesi?</span
+          >
+          <input
+            type="number"
+            class="border-0 outline-0 ring-0 focus:outline-0 focus:ring-0 focus:border-0 w-[315px] h-[45px] bg-[#EBEBEB] rounded-lg"
+            value="0"
+          />
+        </div>
+        <div class="w-[715px] flex flex-none mb-4 items-center">
+          <span
+            class="block w-[400px] text-[#242B5B] text-[11px] ml-4 font-bold text-right pr-6"
+            >Dibayarkan pertahun</span
+          >
+          <input
+            type="number"
+            class="border-0 outline-0 ring-0 focus:outline-0 focus:ring-0 focus:border-0 w-[315px] h-[45px] bg-[#EBEBEB] rounded-lg"
+            value="0"
+          />
+        </div>
+        <div class="w-[715px] flex flex-none mb-4 items-center">
+          <span
+            class="block w-[400px] text-[#242B5B] text-[11px] ml-4 font-bold text-right pr-6"
+            >Dibayarkan perbulan</span
+          >
+          <input
+            type="number"
+            class="border-0 outline-0 ring-0 focus:outline-0 focus:ring-0 focus:border-0 w-[315px] h-[45px] bg-[#EBEBEB] rounded-lg"
+            value="0"
+          />
+        </div>
+
+        <div
+          class="w-[715px] mx-auto flex-none flex h-[45px] items-center bg-[#EBEBEB] rounded-lg mt-6 mb-4"
+        >
+          <span class="text-[#242B5B] text-xs font-semibold mx-4"
+            >III. Zakat Harta Simpanan (Maal)</span
+          >
+        </div>
+        <div class="w-[715px] flex flex-none mb-4 items-center">
+          <span class="block w-[400px] text-[#242B5B] text-[11px] ml-4"
+            >. Total Kekayaan (dalam bentuk tabungan / investasi)</span
+          >
+          <input
+            type="number"
+            class="border-0 outline-0 ring-0 focus:outline-0 focus:ring-0 focus:border-0 w-[315px] h-[45px] bg-[#EBEBEB] rounded-lg"
+            value="0"
+          />
+        </div>
+        <div class="w-[715px] flex flex-none mb-4 items-center">
+          <span class="block w-[400px] text-[#242B5B] text-[11px] ml-4"
+            >. Hutang Jatuh Tempo Saat Membayar Kewajiban Zakat</span
+          >
+          <input
+            type="number"
+            class="border-0 outline-0 ring-0 focus:outline-0 focus:ring-0 focus:border-0 w-[315px] h-[45px] bg-[#EBEBEB] rounded-lg"
+            value="0"
+          />
+        </div>
+        <div class="w-[715px] flex flex-none mb-4 items-center">
+          <span class="block w-[400px] text-[#242B5B] text-[11px] ml-4"
+            >. Harta Yang Wajib Di Zakat</span
+          >
+          <input
+            type="number"
+            class="border-0 outline-0 ring-0 focus:outline-0 focus:ring-0 focus:border-0 w-[315px] h-[45px] bg-[#EBEBEB] rounded-lg"
+            value="0"
+          />
+        </div>
+        <div class="w-[715px] flex flex-none mb-4 items-center">
+          <span class="block w-[400px] text-[#242B5B] text-[11px] ml-4"
+            >. Besarnya nishab</span
+          >
+          <input
+            type="number"
+            class="border-0 outline-0 ring-0 focus:outline-0 focus:ring-0 focus:border-0 w-[315px] h-[45px] bg-[#EBEBEB] rounded-lg"
+            value="0"
+          />
+        </div>
+        <div class="w-[715px] flex flex-none mb-4 items-center">
+          <span class="block w-[400px] text-[#242B5B] text-[11px] ml-4"
+            >. Wajib zakat maal?</span
+          >
+          <input
+            type="number"
+            class="border-0 outline-0 ring-0 focus:outline-0 focus:ring-0 focus:border-0 w-[315px] h-[45px] bg-[#EBEBEB] rounded-lg"
+            value="0"
+          />
+        </div>
+        <div class="w-[715px] flex flex-none mb-4 items-center">
+          <span
+            class="block w-[400px] text-[#242B5B] text-[11px] ml-4 font-bold text-right pr-6"
+            >Dibayarkan pertahun</span
+          >
+          <input
+            type="number"
+            class="border-0 outline-0 ring-0 focus:outline-0 focus:ring-0 focus:border-0 w-[315px] h-[45px] bg-[#EBEBEB] rounded-lg"
+            value="0"
+          />
+        </div>
+        <div class="w-[715px] flex flex-none mb-4 items-center">
+          <span
+            class="block w-[400px] text-[#242B5B] text-[11px] ml-4 font-bold text-right pr-6"
+            >Dibayarkan perbulan (Dengan cara menyicil)</span
+          >
+          <input
+            type="number"
+            class="border-0 outline-0 ring-0 focus:outline-0 focus:ring-0 focus:border-0 w-[315px] h-[45px] bg-[#EBEBEB] rounded-lg"
+            value="0"
+          />
+        </div>
+
+        <button
+          class="w-[715px] mt-6 uppercase text-primary text-xs font-bold rounded-[10px] bg-sandstorm h-[45px] flex items-center justify-center"
+        >
+          Bayar Di baznaz
+        </button>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="w-full">
+      <div
+        class="w-full bg-primary flex justify-center items-center min-h-[70px] max-sm:py-5"
+      >
+        <div
+          class="w-full max-w-[1000px] px-4 flex justify-between max-sm:flex-col"
+        >
+          <ul
+            class="text-white text-xs font-bold capitalize flex sm:items-center max-sm:flex-col"
+          >
+            <li class="sm:border-r border-white pr-2 mr-2 max-sm:mb-2">
+              <a href="#"> Redaksi </a>
+            </li>
+            <li class="sm:border-r border-white pr-2 mr-2 max-sm:mb-2">
+              <a href="#"> kontak </a>
+            </li>
+            <li class="sm:border-r border-white pr-2 mr-2 max-sm:mb-2">
+              <a href="#"> tentang kami </a>
+            </li>
+            <li class="sm:border-r border-white pr-2 mr-2 max-sm:mb-2">
+              <a href="#"> karir </a>
+            </li>
+            <li class="sm:border-r border-white pr-2 mr-2 max-sm:mb-2">
+              <a href="#"> pedoman media siber </a>
+            </li>
+            <li>
+              <a href="#"> site map </a>
+            </li>
+          </ul>
+          <ul class="text-white text-xs font-bold capitalize flex max-sm:mt-6">
+            <li class="mr-2">
+              <a href="#">
+                <img src="./assets/icons/ig.svg" class="h-[23px]" />
+              </a>
+            </li>
+            <li class="mr-2">
+              <a href="#">
+                <img src="./assets/icons/tw.svg" class="h-[23px]"
+              /></a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="./assets/icons/titktok.svg" class="h-[23px]"
+              /></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="bg-white w-full justify-center flex items-center h-[80px]">
+        <p class="text-black text-xs">
+          © 2023 suara.com - All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
+  </body>
+</html>
