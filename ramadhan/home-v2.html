@@ -63,23 +63,11 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
-
-    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
     <style>
-      .swiper {
-        width: 600px;
-        height: 300px;
+      .swiper .swiper-pagination .swiper-pagination-bullet {
+        background: #fff;
       }
     </style>
-    <script type="module">
-      import Swiper from "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs";
-
-      const swiper = new Swiper(".swiper", {
-        // Optional parameters
-        direction: "vertical",
-        loop: true,
-      });
-    </script>
   </head>
   <body>
     <!-- Navbar -->
@@ -166,9 +154,9 @@
     <header class="w-full relative">
       <div class="pt-[70px]">
         <div
-          class="bg-primary w-full min-h-[400px] flex justify-between pt-[50px]"
+          class="bg-primary w-full min-h-[400px] flex justify-between max-lg:flex-col pt-[50px]"
         >
-          <div class="w-[40%] flex justify-center flex-col items-center">
+          <div class="w-[40%] max-lg:w-full flex justify-center flex-col items-center">
             <img
               src="./assets/images/home/banner-header-v2.svg"
               class="w-full max-w-[60%]"
@@ -178,16 +166,182 @@
               class="w-full"
             />
           </div>
-          <div class="w-[60%] border-l-[0.5px] border-[#f0f0f0] mb-[50px]">
+          <div class="w-[60%] max-lg:w-full px-8 max-xs:px-5 max-lg:mt-10 lg:border-l-[0.5px] border-[#f0f0f0] mb-[50px]">
             <!-- Slider main container -->
-            <div class="swiper" data-swiper-autoplay="2000">
+            <div class="swiper w-[100%] min-h-[500px] pb-[50px]" data-swiper-autoplay="2000" pagination="true">
               <!-- Additional required wrapper -->
               <div class="swiper-wrapper">
                 <!-- Slides -->
-                <div class="swiper-slide">Slide 1</div>
-                <div class="swiper-slide">Slide 2</div>
-                <div class="swiper-slide">Slide 3</div>
+                <div class="swiper-slide">
+                  <div class="flex w-full justify-between max-sm:flex-col">
+                    <div class="w-[48%] max-sm:w-full max-sm:my-3">
+                      <span
+                        class="bg-[#E23C5C] py-1 px-3 uppercase text-white text-sm font-[500]"
+                        >Kabar</span
+                      >
+                      <img
+                        src="./assets/images/home/news-banner.svg"
+                        class="w-full h-auto my-4"
+                        alt="newx"
+                      />
+                      <span class="block text-sm text-white mb-2"
+                        >13:00 | 25 April 2023</span
+                      >
+                      <a href="#">
+                        <h2 class="text-2xl font-bold text-white line-clamp-3">
+                          Jadi Tradisi Lebaran, Ini Makna Halal Bihalal Dalam
+                          Pandangan Islam
+                        </h2>
+                      </a>
+                      <p class="text-white text-md mt-2 line-clamp-4">
+                        Setelah Hari Raya Idul Fitri, pasti tidak asing dengan
+                        acara halal bihalal. Acara ini biasa dilakukan dalam
+                        rangka berkumpul baik bersama teman, keluarga, kerabat
+                        untuk bermaaf-maafan.
+                      </p>
+                    </div>
+                    <div class="w-[48%] max-sm:w-full max-sm:my-3">
+                      <span
+                        class="bg-[#E23C5C] py-1 px-3 uppercase text-white text-sm font-[500]"
+                        >Kabar</span
+                      >
+                      <img
+                        src="./assets/images/home/news-banner.svg"
+                        class="w-full h-auto my-4"
+                        alt="newx"
+                      />
+                      <span class="block text-sm text-white mb-2"
+                        >13:00 | 25 April 2023</span
+                      >
+                      <a href="#">
+                        <h2 class="text-2xl font-bold text-white line-clamp-3">
+                          Jadi Tradisi Lebaran, Ini Makna Halal Bihalal Dalam
+                          Pandangan Islam
+                        </h2>
+                      </a>
+                      <p class="text-white text-md mt-2 line-clamp-4">
+                        Setelah Hari Raya Idul Fitri, pasti tidak asing dengan
+                        acara halal bihalal. Acara ini biasa dilakukan dalam
+                        rangka berkumpul baik bersama teman, keluarga, kerabat
+                        untuk bermaaf-maafan.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="flex w-full justify-between max-sm:flex-col">
+                    <div class="w-[48%] max-sm:w-full max-sm:my-3">
+                      <span
+                        class="bg-[#E23C5C] py-1 px-3 uppercase text-white text-sm font-[500]"
+                        >Kabar</span
+                      >
+                      <img
+                        src="./assets/images/home/news-banner.svg"
+                        class="w-full h-auto my-4"
+                        alt="newx"
+                      />
+                      <span class="block text-sm text-white mb-2"
+                        >13:00 | 25 April 2023</span
+                      >
+                      <a href="#">
+                        <h2 class="text-2xl font-bold text-white line-clamp-3">
+                          Jadi Tradisi Lebaran, Ini Makna Halal Bihalal Dalam
+                          Pandangan Islam
+                        </h2>
+                      </a>
+                      <p class="text-white text-md mt-2 line-clamp-4">
+                        Setelah Hari Raya Idul Fitri, pasti tidak asing dengan
+                        acara halal bihalal. Acara ini biasa dilakukan dalam
+                        rangka berkumpul baik bersama teman, keluarga, kerabat
+                        untuk bermaaf-maafan.
+                      </p>
+                    </div>
+                    <div class="w-[48%] max-sm:w-full max-sm:my-3">
+                      <span
+                        class="bg-[#E23C5C] py-1 px-3 uppercase text-white text-sm font-[500]"
+                        >Kabar</span
+                      >
+                      <img
+                        src="./assets/images/home/news-banner.svg"
+                        class="w-full h-auto my-4"
+                        alt="newx"
+                      />
+                      <span class="block text-sm text-white mb-2"
+                        >13:00 | 25 April 2023</span
+                      >
+                      <a href="#">
+                        <h2 class="text-2xl font-bold text-white line-clamp-3">
+                          Jadi Tradisi Lebaran, Ini Makna Halal Bihalal Dalam
+                          Pandangan Islam
+                        </h2>
+                      </a>
+                      <p class="text-white text-md mt-2 line-clamp-4">
+                        Setelah Hari Raya Idul Fitri, pasti tidak asing dengan
+                        acara halal bihalal. Acara ini biasa dilakukan dalam
+                        rangka berkumpul baik bersama teman, keluarga, kerabat
+                        untuk bermaaf-maafan.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="flex w-full justify-between max-sm:flex-col">
+                    <div class="w-[48%] max-sm:w-full max-sm:my-3">
+                      <span
+                        class="bg-[#E23C5C] py-1 px-3 uppercase text-white text-sm font-[500]"
+                        >Serbaserbi</span
+                      >
+                      <img
+                        src="./assets/images/home/news-banner.svg"
+                        class="w-full h-auto my-4"
+                        alt="newx"
+                      />
+                      <span class="block text-sm text-white mb-2"
+                        >13:00 | 25 April 2023</span
+                      >
+                      <a href="#">
+                        <h2 class="text-2xl font-bold text-white line-clamp-3">
+                          Jadi Tradisi Lebaran, Ini Makna Halal Bihalal Dalam
+                          Pandangan Islam
+                        </h2>
+                      </a>
+                      <p class="text-white text-md mt-2 line-clamp-4">
+                        Setelah Hari Raya Idul Fitri, pasti tidak asing dengan
+                        acara halal bihalal. Acara ini biasa dilakukan dalam
+                        rangka berkumpul baik bersama teman, keluarga, kerabat
+                        untuk bermaaf-maafan.
+                      </p>
+                    </div>
+                    <div class="w-[48%] max-sm:w-full max-sm:my-3">
+                      <span
+                        class="bg-[#E23C5C] py-1 px-3 uppercase text-white text-sm font-[500]"
+                        >Kabar</span
+                      >
+                      <img
+                        src="./assets/images/home/news-banner.svg"
+                        class="w-full h-auto my-4"
+                        alt="newx"
+                      />
+                      <span class="block text-sm text-white mb-2"
+                        >13:00 | 25 April 2023</span
+                      >
+                      <a href="#">
+                        <h2 class="text-2xl font-bold text-white line-clamp-3">
+                          Jadi Tradisi Lebaran, Ini Makna Halal Bihalal Dalam
+                          Pandangan Islam
+                        </h2>
+                      </a>
+                      <p class="text-white text-md mt-2 line-clamp-4">
+                        Setelah Hari Raya Idul Fitri, pasti tidak asing dengan
+                        acara halal bihalal. Acara ini biasa dilakukan dalam
+                        rangka berkumpul baik bersama teman, keluarga, kerabat
+                        untuk bermaaf-maafan.
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
+              <div class="swiper-pagination"></div>
             </div>
           </div>
         </div>
@@ -463,5 +617,20 @@
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper(".swiper", {
+        // Optional parameters
+        direction: "horizontal",
+        loop: true,
+        autoplay: {
+          delay: 3000,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+        },
+      });
+    </script>
   </body>
 </html>
