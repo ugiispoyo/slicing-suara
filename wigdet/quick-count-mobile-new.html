@@ -1,0 +1,154 @@
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap"
+  rel="stylesheet"
+/>
+<style>
+  .wrap-quick-count {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+  }
+  .wrap-quick-count .content {
+    width: 100%;
+    max-width: 440px;
+    min-height: 450px;
+    margin: auto;
+    background: url("assets/quick-count/bg.svg") no-repeat;
+    background-size: contain;
+    padding: 20px;
+    box-sizing: border-box;
+    flex-direction: column;
+    display: flex;
+  }
+  .wrap-quick-count .content .left {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .wrap-quick-count .content .right {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+  .wrap-quick-count .content .bottom {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .wrap-quick-count .content .right > span {
+    color: #000;
+    font-size: 9px;
+    font-weight: 400;
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .wrap-quick-count .content .wrap-count {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 15px;
+    border-bottom: 1px solid #a29c9c;
+    margin-bottom: 10px;
+  }
+  .wrap-quick-count .content .wrap-count > div {
+    width: 33%;
+    min-height: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    overflow: hidden;
+  }
+  .wrap-quick-count .content .wrap-count > div:first-child,
+  .wrap-quick-count .content .wrap-count > div:last-child {
+    border-left: 1px dashed #a29c9c;
+    border-right: 1px dashed #a29c9c;
+  }
+  .wrap-quick-count .content .wrap-count > div span:first-child {
+    font-size: 20px;
+    text-align: center;
+    font-weight: 700;
+    visibility: hidden;
+    animation: 0s linear 1.2s forwards textPoint;
+  }
+  .wrap-quick-count .content .wrap-count > div span:last-child {
+    display: block;
+    width: 100%;
+    animation: point 1s;
+    position: relative;
+  }
+  .wrap-quick-count .content .wrap-count > div:nth-child(1) span:first-child {
+    color: #2064a8;
+  }
+  .wrap-quick-count .content .wrap-count > div:nth-child(1) span:last-child {
+    background: #2064a8;
+  }
+  .wrap-quick-count .content .wrap-count > div:nth-child(2) span:first-child {
+    color: #669fd8;
+  }
+  .wrap-quick-count .content .wrap-count > div:nth-child(2) span:last-child {
+    background: #669fd8;
+  }
+  .wrap-quick-count .content .wrap-count > div:nth-child(3) span:first-child {
+    color: #be1e2d;
+  }
+  .wrap-quick-count .content .wrap-count > div:nth-child(3) span:last-child {
+    background: #be1e2d;
+  }
+
+  @keyframes point {
+    0% {
+      bottom: -100%;
+    }
+    100% {
+      bottom: 0px;
+    }
+  }
+  @keyframes textPoint {
+    to {
+    visibility: visible;
+    }
+  }
+</style>
+<div class="wrap-quick-count">
+  <div class="content">
+    <div class="left">
+      <img
+        src="./assets/quick-count/logo-new.svg"
+        alt="logo-quict-count"
+        width="190px"
+        style="margin-bottom: 20px"
+      />
+      <img
+        src="./assets/quick-count/img-capres-cawapres.svg"
+        alt="capres"
+        width="100%"
+      />
+    </div>
+    <div class="right">
+      <div class="wrap-count">
+        <div>
+          <span>24.09%</span>
+          <span style="height: 24%"></span>
+        </div>
+        <div>
+          <span>58.1%</span>
+          <span style="height: 58.1%"></span>
+        </div>
+        <div>
+          <span>17.01%</span>
+          <span style="height: 17.01%"></span>
+        </div>
+      </div>
+      <span>Data Masuk <b>74.72%</b> per 22 Februari 2024 Pukul 14:00 WIB</span>
+    </div>
+    <div class="bottom">
+      <img src="./assets/quick-count/logo-suara.svg" alt="logo-suara" />
+      <img src="./assets/quick-count/logo-arkadia.svg" alt="logo-arkadia" />
+    </div>
+  </div>
+</div>
