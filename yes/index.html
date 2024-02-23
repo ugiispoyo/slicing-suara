@@ -61,7 +61,7 @@
   <body>
     <!-- Navbar -->
     <nav
-      class="bg-white sticky flex items-center justify-center w-full z-[49] shadow-[0px_6px_8px_0px_#00000026]"
+      class="bg-white fixed flex items-center justify-center w-full z-[49] shadow-[0px_6px_8px_0px_#00000026]"
     >
       <div
         class="w-full lg:h-[100px] h-[70px] max-w-[1200px] flex max-lg:flex-wrap items-center justify-between lg:px-4 relative"
@@ -129,9 +129,7 @@
             <li class="max-lg:mb-4">
               <a href="#"> Foto & Video</a>
             </li>
-            <li
-              class="flex justify-end lg:w-[25%] w-full max-lg:justify-start"
-            >
+            <li class="flex justify-end lg:w-[25%] w-full max-lg:justify-start">
               <div class="flex justify-between items-center lg:ml-4 lg:w-full">
                 <a href="#" class="lg:mr-4 mr-5">
                   <img src="icons/user-circle.svg" class="w-[38px] h-auto" />
@@ -159,10 +157,29 @@
     </nav>
 
     <!-- Heder -->
-    <header>
-
+    <header class="w-full relative lg:pt-[100px] pt-[70px]">
+      <img src="./images/banner-home.svg" class="w-full absolute" />
+      <div
+        class="w-full max-w-[1200px] mx-auto px-4 relative"
+      >
+        <img
+          src="./images/core-suara.svg"
+          class="md:h-[84px] sm:h-[60px] h-[40px] absolute top-0 lg:right-0 right-4"
+        />
+        <div class="w-full max-w-[760px] lg:pt-[90px] md:pt-[120px] sm:pt-[100px] pt-[50px] lg:ml-[40px]">
+          <h1
+            class="lg:text-[52px] md:text-[30px] sm:text-[25px] text-[16px] lg:leading-[58px] md:leading-[40px] sm:leading-[30px] leading-[20px] font-bold text-white border-white border-b sm:mb-[20px] sm:pb-[20px] mb-[10px] pb-[10px]"
+          >
+            Towards an Inclusive Digital and Green Economy
+          </h1>
+          <p class="xl:text-[27px] lg:text-[22px] sm:text-[14px] xs:text-xs text-[10px] text-white block xl:leading-[35px] lg:leading-[32px] sm:leading-[20px] leading-[14px]">
+            Kaum muda adalah pemegang kunci untuk menggerakkan ekosistem digital
+            yang inklusif dan menumbuhkan ekonomi hijau yang produktif guna
+            menciptakan kesejahteraan sosial menuju Indonesia Emas 2045
+          </p>
+        </div>
+      </div>
     </header>
-
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
   </body>
