@@ -13,3 +13,15 @@ button {
 .scrollbar-w-0::-webkit-scrollbar {
   display: none;
 }
+
+.swiper.custom .swiper-pagination .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background: #fff;
+  opacity: 1;
+}
+.swiper.custom
+  .swiper-pagination
+  .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background: #e94e1b;
+}
