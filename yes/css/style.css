@@ -6,6 +6,10 @@ button {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
+a {
+  line-height: normal;
+}
+
 .scrollbar-w-0 {
   -ms-overflow-style: none;
   scrollbar-width: none;
