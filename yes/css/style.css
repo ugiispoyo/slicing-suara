@@ -19,12 +19,19 @@ button {
   color: white;
   font-size: 60px;
 }
+.swiper.custom.swiper-foto > .swiper-button-prev::after,
+.swiper.custom.swiper-foto > .swiper-button-next::after {
+  color: #cdcdcd;
+}
 
 .swiper.custom .swiper-pagination .swiper-pagination-bullet {
   width: 10px;
   height: 10px;
   background: #fff;
   opacity: 1;
+}
+.swiper.custom.swiper-foto .swiper-pagination .swiper-pagination-bullet {
+  background: #cfcfcf;
 }
 .swiper.custom
   .swiper-pagination
