@@ -38,3 +38,9 @@ button {
   .swiper-pagination-bullet.swiper-pagination-bullet-active {
   background: #e94e1b;
 }
+
+.swiper.custom.publikasi-about
+  .swiper-pagination
+  .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background: #b4dc02;
+}
