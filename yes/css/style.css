@@ -48,3 +48,18 @@ a {
   .swiper-pagination-bullet.swiper-pagination-bullet-active {
   background: #b4dc02;
 }
+
+.swiper.custom.detail > .swiper-button-prev::after,
+.swiper.custom.detail > .swiper-button-next::after {
+  font-size: 20px;
+  color: #000;
+}
+
+.swiper.custom.detail > .swiper-button-prev,
+.swiper.custom.detail > .swiper-button-next {
+  background: #ffffffbe;
+  height: 30px;
+  width: 30px;
+  border-radius: 30px;
+  top: 60%;
+}
