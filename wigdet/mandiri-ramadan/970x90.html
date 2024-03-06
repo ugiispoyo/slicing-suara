@@ -1,7 +1,7 @@
 <style>
   .count-down {
     color: #f9b716;
-    font-size: 50px;
+    font-size: 40px;
     font-weight: 700;
     z-index: 5;
     font-family: Arial, Helvetica, sans-serif;
@@ -16,8 +16,8 @@
 </style>
 <div
   style="
-    width: 640px;
-    height: 200px;
+    width: 970px;
+    height: 90px;
     position: relative;
     display: flex;
     align-items: center;
@@ -26,7 +26,7 @@
   "
 >
   <img
-    src="./assets/bg-640x200-.svg"
+    src="./assets/bg-970x90-.svg"
     style="
       position: absolute;
       object-fit: cover;
@@ -35,7 +35,22 @@
       inset: 0px;
     "
   />
-  <div style="position: absolute; top: 38%; right: 18%;">
+  <div
+    style="position: absolute; left: 0px; max-height: 90px; overflow: hidden;"
+  >
+    <video
+      muted="false"
+      autoplay="true"
+      playsinline="true"
+      controls="autohide"
+      loop=""
+      width="300px"
+      height="170px"
+    >
+      <source src="./assets/video.mp4" type="video/mp4" />
+    </video>
+  </div>
+  <div style="position: absolute; top: 10px; right: 15%">
     <div
       style="
         display: flex;
@@ -44,7 +59,9 @@
         justify-content: center;
       "
     >
-      <span id="menuju" class="info">-</span>
+      <span id="menuju" class="info" style="display: none">-</span>
+      <span class="info">Maghrib Untuk Daerah</span>
+      <span class="info">Jakarta & Sekitarnya</span>
       <div>
         <span class="count-down" id="hours">00</span>
         <span class="count-down">:</span>
@@ -52,7 +69,6 @@
         <span class="count-down">:</span>
         <span class="count-down" id="seconds">00</span>
       </div>
-      <span class="info">Jakarta & Sekitarnya</span>
     </div>
   </div>
 </div>
@@ -92,7 +108,7 @@
   var isyatime = times[isya.toLowerCase()];
 
   var datenow = dayjs().format("MMMM DD, YYYY");
-  
+
   // var magribtime = "16:10";
   // Set the date we're counting down to
   var countDownDatemagrib = new Date(
