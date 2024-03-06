@@ -14,48 +14,59 @@
   }
   .wrap-quick-count .content {
     width: 100%;
-    max-width: 970px;
-    min-height: 250px;
+    max-width: 440px;
+    min-height: 450px;
     margin: auto;
     background: url("assets/quick-count/bg.svg") no-repeat;
     background-size: contain;
-    padding: 30px;
+    padding: 20px;
     box-sizing: border-box;
+    flex-direction: column;
     display: flex;
-    justify-content: space-between;
   }
   .wrap-quick-count .content .left {
-    width: 40%;
+    width: 100%;
     display: flex;
     flex-direction: column;
   }
   .wrap-quick-count .content .right {
-    width: 56%;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    position: relative;
+    margin-top: 20px;
   }
-
+  .wrap-quick-count .content .bottom {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
   .wrap-quick-count .content .right > span {
     color: #000;
     font-size: 9px;
     font-weight: 400;
     display: block;
+    text-align: center;
+    margin-bottom: 10px;
   }
   .wrap-quick-count .content .wrap-count {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     padding: 0px 15px;
     border-bottom: 1px solid #a29c9c;
     margin-bottom: 10px;
   }
   .wrap-quick-count .content .wrap-count > div {
-    width: 30%;
+    width: 33%;
     min-height: 140px;
     display: flex;
     flex-direction: column;
     justify-content: end;
     overflow: hidden;
+  }
+  .wrap-quick-count .content .wrap-count > div:first-child,
+  .wrap-quick-count .content .wrap-count > div:last-child {
+    border-left: 1px dashed #a29c9c;
+    border-right: 1px dashed #a29c9c;
   }
   .wrap-quick-count .content .wrap-count > div span:first-child {
     font-size: 20px;
@@ -69,9 +80,6 @@
     width: 100%;
     animation: point 1s;
     position: relative;
-  }
-  .wrap-quick-count .content .wrap-count > div:nth-child(2) {
-    margin: 0px 1px;
   }
   .wrap-quick-count .content .wrap-count > div:nth-child(1) span:first-child {
     color: #2064a8;
@@ -102,7 +110,7 @@
   }
   @keyframes textPoint {
     to {
-      visibility: visible;
+    visibility: visible;
     }
   }
 </style>
@@ -110,28 +118,18 @@
   <div class="content">
     <div class="left">
       <img
-        src="./assets/quick-count/logo-new.svg"
+        src="./assets/logo-new.svg"
         alt="logo-quict-count"
         width="190px"
-        style="margin-bottom: 30px"
+        style="margin-bottom: 20px"
       />
       <img
-        src="./assets/quick-count/img-capres-cawapres.svg"
+        src="./assets/img-capres-cawapres.svg"
         alt="capres"
-        width="98%"
+        width="100%"
       />
     </div>
     <div class="right">
-      <img
-        src="./assets/quick-count/logo-suara.svg"
-        width="190px"
-        style="position: absolute; right: -25px; top: -30px"
-      />
-      <img
-        src="./assets/quick-count/logo-arkadia.svg"
-        style="position: absolute; right: -10px; bottom: 0px"
-      />
-
       <div class="wrap-count">
         <div>
           <span>24.09%</span>
@@ -147,6 +145,10 @@
         </div>
       </div>
       <span>Data Masuk <b>74.72%</b> per 22 Februari 2024 Pukul 14:00 WIB</span>
+    </div>
+    <div class="bottom">
+      <img src="./assets/logo-suara.svg" alt="logo-suara" />
+      <img src="./assets/logo-arkadia.svg" alt="logo-arkadia" />
     </div>
   </div>
 </div>
