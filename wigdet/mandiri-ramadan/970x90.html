@@ -8,9 +8,12 @@
   }
   .info {
     color: #fff;
-    font-size: 13px;
+    font-size: 11px;
     top: 58%;
     font-weight: 400;
+    display: block;
+    text-align: center;
+    line-height: 15px;
     font-family: Arial, Helvetica, sans-serif;
   }
 </style>
@@ -67,9 +70,7 @@
         justify-content: center;
       "
     >
-      <span id="menuju" class="info" style="display: none">-</span>
-      <span class="info">Maghrib Untuk Daerah</span>
-      <span class="info">Jakarta & Sekitarnya</span>
+      <span id="menuju" class="info" style="max-width: 130px">-</span>
       <div>
         <span class="count-down" id="hours">00</span>
         <span class="count-down">:</span>
@@ -125,6 +126,9 @@
   var countDownDateimsak = new Date(
     datenow + " " + imsaktime + ":00"
   ).getTime();
+  var countDownDateDzuhur = new Date(
+    datenow + " " + dhuhurtime + ":00"
+  ).getTime();
   var countDownDateimsaknextday = new Date(
     dayjs().add(1, "days") + " " + imsaktime + ":00"
   ).getTime();
@@ -145,32 +149,32 @@
       var seconds = Math.floor((distance % (1000 * 60)) / 1000);
       // Display the result in the element
       document.getElementById("menuju").innerHTML =
-        "Menuju Waktu Berbuka Puasa";
+        "Maghrib Untuk Daerah Jakarta & Sekitarnya";
       document.getElementById("hours").innerHTML = ("0" + hours).slice(-2);
       document.getElementById("minutes").innerHTML = ("0" + minutes).slice(-2);
       document.getElementById("seconds").innerHTML = ("0" + seconds).slice(-2);
       // If the count down is finished, write some text
     } else if (distance < 0) {
       clearInterval(x);
-      //interval magrib
+      /* ======== interval Dzuhur ====== */
       var y = setInterval(function () {
         // Get today's date and time
         var now = new Date().getTime();
         // Find the distance between now and the count down date
-        var distancebuka = countDownDatemagrib - now;
-        if (distancebuka >= 0) {
+        var distancedzuhur = countDownDateDzuhur - now;
+        if (distancedzuhur >= 0) {
           // Time calculations for days, hours, minutes and seconds
           // var days = Math.floor(distance / (1000 * 60 * 60 * 24));
           var hours = Math.floor(
-            (distancebuka % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+            (distancedzuhur % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
           );
           var minutes = Math.floor(
-            (distancebuka % (1000 * 60 * 60)) / (1000 * 60)
+            (distancedzuhur % (1000 * 60 * 60)) / (1000 * 60)
           );
-          var seconds = Math.floor((distancebuka % (1000 * 60)) / 1000);
+          var seconds = Math.floor((distancedzuhur % (1000 * 60)) / 1000);
           // Display the result in the element
           document.getElementById("menuju").innerHTML =
-            "Menuju Waktu Berbuka Puasa";
+            "Dzuhur Untuk Daerah Jakarta & Sekitarnya";
           document.getElementById("hours").innerHTML = ("0" + hours).slice(-2);
           document.getElementById("minutes").innerHTML = ("0" + minutes).slice(
             -2
@@ -179,26 +183,27 @@
             -2
           );
           // If the count down is finished, write some text
-        } else if (distancebuka < 0) {
+        } else if (distancedzuhur < 0) {
           clearInterval(y);
-          //interval magrib next day
-          var z = setInterval(function () {
+          /* ======== interval Magrib ====== */
+          var y = setInterval(function () {
             // Get today's date and time
             var now = new Date().getTime();
             // Find the distance between now and the count down date
-            var distancenext = countDownDateimsaknextday - now;
-            if (distancenext >= 0) {
+            var distancebuka = countDownDatemagrib - now;
+            if (distancebuka >= 0) {
               // Time calculations for days, hours, minutes and seconds
               // var days = Math.floor(distance / (1000 * 60 * 60 * 24));
               var hours = Math.floor(
-                (distancenext % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+                (distancebuka % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
               );
               var minutes = Math.floor(
-                (distancenext % (1000 * 60 * 60)) / (1000 * 60)
+                (distancebuka % (1000 * 60 * 60)) / (1000 * 60)
               );
-              var seconds = Math.floor((distancenext % (1000 * 60)) / 1000);
+              var seconds = Math.floor((distancebuka % (1000 * 60)) / 1000);
               // Display the result in the element
-              document.getElementById("menuju").innerHTML = "MENUJU IMSAK";
+              document.getElementById("menuju").innerHTML =
+                "Maghrib Untuk Daerah Jakarta & Sekitarnya";
               document.getElementById("hours").innerHTML = ("0" + hours).slice(
                 -2
               );
@@ -209,8 +214,41 @@
                 "0" + seconds
               ).slice(-2);
               // If the count down is finished, write some text
-            } else if (distance > 0) {
-              clearInterval(z);
+            } else if (distancebuka < 0) {
+              clearInterval(y);
+              //interval magrib next day
+              var z = setInterval(function () {
+                // Get today's date and time
+                var now = new Date().getTime();
+                // Find the distance between now and the count down date
+                var distancenext = countDownDateimsaknextday - now;
+                if (distancenext >= 0) {
+                  // Time calculations for days, hours, minutes and seconds
+                  // var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                  var hours = Math.floor(
+                    (distancenext % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+                  );
+                  var minutes = Math.floor(
+                    (distancenext % (1000 * 60 * 60)) / (1000 * 60)
+                  );
+                  var seconds = Math.floor((distancenext % (1000 * 60)) / 1000);
+                  // Display the result in the element
+                  document.getElementById("menuju").innerHTML =
+                    "Imsyak Untuk Daerah Jakarta & Sekitarnya";
+                  document.getElementById("hours").innerHTML = (
+                    "0" + hours
+                  ).slice(-2);
+                  document.getElementById("minutes").innerHTML = (
+                    "0" + minutes
+                  ).slice(-2);
+                  document.getElementById("seconds").innerHTML = (
+                    "0" + seconds
+                  ).slice(-2);
+                  // If the count down is finished, write some text
+                } else if (distance > 0) {
+                  clearInterval(z);
+                }
+              }, 1000);
             }
           }, 1000);
         }
