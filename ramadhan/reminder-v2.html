@@ -788,7 +788,7 @@
         });
 
         var items = {
-          no: "No",
+          // no: "No",
           day: "Tanggal",
           imsak: "Imsak",
           subuh: "Subuh",
@@ -821,7 +821,7 @@
           var klass = clas;
           date.setDate(date.getDate() + 1); // next daylight
           if (hijri.toLowerCase().includes("ramadhan")) {
-            times.no = i;
+            // times.no = i;
             tbody.appendChild(makeTableRow(times, items, klass));
             i++;
           }
