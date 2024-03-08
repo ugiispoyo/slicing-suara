@@ -67,6 +67,20 @@
       .swiper .swiper-pagination .swiper-pagination-bullet {
         background: #fff;
       }
+      .count-down {
+        color: #f9b716;
+        font-size: 30px;
+        font-weight: 700;
+        z-index: 5;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .info {
+        color: #fff;
+        font-size: 10px;
+        top: 58%;
+        font-weight: 400;
+        font-family: Arial, Helvetica, sans-serif;
+      }
     </style>
   </head>
   <body>
@@ -156,19 +170,72 @@
         <div
           class="bg-primary w-full min-h-[400px] flex justify-between max-lg:flex-col pt-[50px]"
         >
-          <div class="w-[40%] max-lg:w-full flex justify-center flex-col items-center">
+          <div
+            class="w-[40%] max-lg:w-full flex justify-center flex-col items-center relative"
+          >
             <img
               src="./assets/images/home/banner-header-v2.svg"
-              class="w-full max-w-[60%]"
+              class="w-full max-w-[60%] mb-[30px]"
             />
+            <!-- Countdown -->
+            <div
+              style="
+                width: 240px;
+                height: 240px;
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+              "
+            >
+              <img
+                src="./assets/images/home/bg-bullet-fly.svg"
+                style="
+                  position: absolute;
+                  object-fit: cover;
+                  width: 100%;
+                  height: 100%;
+                  inset: 0px;
+                  box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.75);
+                  border-radius: 50%;
+                "
+              />
+              <div style="position: absolute; top: 51%">
+                <div
+                  style="
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                  "
+                >
+                  <span id="menuju" class="info">-</span>
+                  <div>
+                    <span class="count-down" id="hours">00</span>
+                    <span class="count-down">:</span>
+                    <span class="count-down" id="minutes">00</span>
+                    <span class="count-down">:</span>
+                    <span class="count-down" id="seconds">00</span>
+                  </div>
+                  <span class="info">Jakarta & Sekitarnya</span>
+                </div>
+              </div>
+            </div>
             <img
               src="./assets/images/home/banner-header-v2-1.svg"
               class="w-full"
             />
           </div>
-          <div class="w-[60%] max-lg:w-full px-8 max-xs:px-5 max-lg:mt-10 lg:border-l-[0.5px] border-[#f0f0f0] mb-[50px]">
+          <div
+            class="w-[60%] max-lg:w-full px-8 max-xs:px-5 max-lg:mt-10 lg:border-l-[0.5px] border-[#f0f0f0] mb-[50px]"
+          >
             <!-- Slider main container -->
-            <div class="swiper w-[100%] min-h-[500px] pb-[50px]" data-swiper-autoplay="2000" pagination="true">
+            <div
+              class="swiper w-[100%] min-h-[500px] pb-[50px]"
+              data-swiper-autoplay="2000"
+              pagination="true"
+            >
               <!-- Additional required wrapper -->
               <div class="swiper-wrapper">
                 <!-- Slides -->
@@ -403,11 +470,22 @@
           </div>
 
           <div
-            class="md:min-h-[320px] max-md:min-h-[260px] max-sm:min-h-auto p-4 w-full sm:max-w-[44%] lg:max-w-[30%] m-4 max-sm:mx-2 max-xs:mx-0 rounded-[10px] bg-primary"
+            class="relative md:min-h-[320px] max-md:min-h-[260px] overflow-hidden max-h-[290px] max-sm:min-h-auto p-4 w-full sm:max-w-[44%] lg:max-w-[30%] m-4 max-sm:mx-2 max-xs:mx-0 rounded-[10px] bg-primary"
           >
+            <img
+              src="./assets/images/home/bg-bri.svg"
+              style="
+                position: absolute;
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
+                inset: 0px;
+              "
+              alt="bg"
+            />
             <a
               href="#"
-              class="flex w-full flex-col items-center justify-center max-xs:min-h-[250px]"
+              class="flex w-full flex-col items-center justify-center max-xs:min-h-[250px] relative z-[2]"
             >
               <h3 class="capitalize text-white sm:text-2xl text-base font-bold">
                 reminder
@@ -417,8 +495,8 @@
                 class="md:w-[150px] w-[130px] my-2"
               />
               <p class="text-center text-white sm:text-sm text-xs">
-                Time signal, panduan jadwal sholat, buka puasa, dan sahur selama
-                ramadhan yang bisa kamu download secara gratisan
+                Panduan jadwal sholat, buka puasa, dan sahur selama ramadan yang
+                bisa kamu download secara gratisan
               </p>
             </a>
           </div>
@@ -487,55 +565,22 @@
             class="px-4 min-h-[200px] w-full items-center justify-center max-lg:justify-center max-w-[1050px] flex flex-wrap mt-[40px] relative"
           >
             <div
-              class="py-4 px-4 w-full lg:max-w-[49%] max-sm:mx-2 max-xs:mx-0 max-sm:px-2"
+              class="py-4 px-4 w-full lg:max-w-[100%] max-sm:mx-2 max-xs:mx-0 max-sm:px-2"
             >
               <div
-                class="bg-primary min-h-[200px] w-full flex items-center rounded-[10px] pr-4 py-4"
+                class="bg-primary min-h-[250px] w-full flex items-center rounded-[10px] lg:pr-4 lg:py-4 relative justify-end max-lg:flex-col max-lg:px-5"
               >
                 <img
-                  src="./assets/images/home/komunitas-2.png"
-                  class="lg:h-[300px] h-[200px] w-auto mr-6"
+                  src="./assets/images/home/tgif.svg"
+                  class="h-[300px] w-auto lg:absolute lg:left-[0] lg:bottom-[0] max-lg:relative max-lg:top-[-60px] z-[2]"
                 />
-                <div class="flex flex-col">
+                <div class="flex flex-col lg:max-w-[570px] 2xs:mb-5 relative max-2xs:top-[-30px]">
                   <h3
-                    class="uppercase text-white sm:text-[26px] text-base mb-2 font-bold leading-[30px]"
-                  >
-                    WAKTUNYA COMMUNITIMES
-                  </h3>
-                  <p class="text-white text-sm">
-                    Kumpul bareng dengan konten insightful seperti workshop
-                    serta ngabuburit bareng komunitas selama ramadan
-                    <br />
-                    <br />
-                    Lokasi : Cafe / Public space Konten: Talkshow, workshop,
-                    games dll
-                  </p>
-                  <a
-                    href="#"
-                    class="text-primary text-sm bg-sandstorm rounded-[10px] py-2 px-5 uppercase font-bold mt-4 max-w-[100px] text-center block"
-                  >
-                    detail
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div
-              class="py-4 px-4 w-full lg:max-w-[49%] max-sm:mx-2 max-xs:mx-0 max-sm:px-2"
-            >
-              <div
-                class="bg-primary min-h-[200px] w-full flex items-center rounded-[10px] pr-4 py-4"
-              >
-                <img
-                  src="./assets/images/home/komunitas-1.png"
-                  class="lg:h-[300px] h-[200px] w-auto mr-6"
-                />
-                <div class="flex flex-col">
-                  <h3
-                    class="uppercase text-white sm:text-[26px] text-base mb-2 font-bold leading-[30px]"
+                    class="uppercase text-[#E4BC27] sm:text-[26px] text-base mb-2 font-bold leading-[30px]"
                   >
                     TGIF
-                    <i class="sm:text-[20px] text-sm"
-                      >(TAKJIL GRATIS IN FRIDAY)</i
+                    <span class="sm:text-[20px] text-sm font-[300]"
+                      >(TAKJIL GRATIS IN FRIDAY)</span
                     >
                   </h3>
                   <p class="text-white text-sm">
@@ -631,6 +676,151 @@
           el: ".swiper-pagination",
         },
       });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.10/dayjs.min.js"></script>
+    <script
+      src="https://assets.suara.com/desktop/js/praytimes.js?=v10"
+      type="text/javascript"
+    ></script>
+    <script type="text/javascript">
+      prayTimes.tune({
+        imsak: 2,
+        subuh: 2,
+        dhuhur: 4,
+        ashar: 2,
+        maghrib: 3,
+        isya: 2,
+      });
+      var geo = [-6.211544, 106.845172, 10.22]; //jkt
+      var timezone = +7;
+      var date = new Date(); // today
+      var times = prayTimes.getTimes(date, geo, timezone);
+      var timenow = date.getHours() + ":" + date.getMinutes();
+
+      var imsak = "imsak";
+      var subuh = "subuh";
+      var dhuhur = "dhuhur";
+      var ashar = "ashar";
+      var magrib = "maghrib";
+      var isya = "isya";
+
+      var imsaktime = times[imsak.toLowerCase()];
+
+      var subuhtime = times[subuh.toLowerCase()];
+      var dhuhurtime = times[dhuhur.toLowerCase()];
+      var ashartime = times[ashar.toLowerCase()];
+      var magribtime = times[magrib.toLowerCase()];
+      var isyatime = times[isya.toLowerCase()];
+
+      var datenow = dayjs().format("MMMM DD, YYYY");
+
+      // var magribtime = "16:10";
+      // Set the date we're counting down to
+      var countDownDatemagrib = new Date(
+        datenow + " " + magribtime + ":00"
+      ).getTime();
+      var countDownDateimsak = new Date(
+        datenow + " " + imsaktime + ":00"
+      ).getTime();
+      var countDownDateimsaknextday = new Date(
+        dayjs().add(1, "days") + " " + imsaktime + ":00"
+      ).getTime();
+      // Update the count down every 1 second
+      //interval imsak 1
+      var x = setInterval(function () {
+        // Get today's date and time
+        var now = new Date().getTime();
+        // Find the distance between now and the count down date
+        var distance = countDownDateimsak - now;
+        if (distance >= 0) {
+          // Time calculations for days, hours, minutes and seconds
+          // var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+          var hours = Math.floor(
+            (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+          );
+          var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+          var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+          // Display the result in the element
+          document.getElementById("menuju").innerHTML =
+            "Menuju Waktu Berbuka Puasa";
+          document.getElementById("hours").innerHTML = ("0" + hours).slice(-2);
+          document.getElementById("minutes").innerHTML = ("0" + minutes).slice(
+            -2
+          );
+          document.getElementById("seconds").innerHTML = ("0" + seconds).slice(
+            -2
+          );
+          // If the count down is finished, write some text
+        } else if (distance < 0) {
+          clearInterval(x);
+          //interval magrib
+          var y = setInterval(function () {
+            // Get today's date and time
+            var now = new Date().getTime();
+            // Find the distance between now and the count down date
+            var distancebuka = countDownDatemagrib - now;
+            if (distancebuka >= 0) {
+              // Time calculations for days, hours, minutes and seconds
+              // var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+              var hours = Math.floor(
+                (distancebuka % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+              );
+              var minutes = Math.floor(
+                (distancebuka % (1000 * 60 * 60)) / (1000 * 60)
+              );
+              var seconds = Math.floor((distancebuka % (1000 * 60)) / 1000);
+              // Display the result in the element
+              document.getElementById("menuju").innerHTML =
+                "Menuju Waktu Berbuka Puasa";
+              document.getElementById("hours").innerHTML = ("0" + hours).slice(
+                -2
+              );
+              document.getElementById("minutes").innerHTML = (
+                "0" + minutes
+              ).slice(-2);
+              document.getElementById("seconds").innerHTML = (
+                "0" + seconds
+              ).slice(-2);
+              // If the count down is finished, write some text
+            } else if (distancebuka < 0) {
+              clearInterval(y);
+              //interval magrib next day
+              var z = setInterval(function () {
+                // Get today's date and time
+                var now = new Date().getTime();
+                // Find the distance between now and the count down date
+                var distancenext = countDownDateimsaknextday - now;
+                if (distancenext >= 0) {
+                  // Time calculations for days, hours, minutes and seconds
+                  // var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                  var hours = Math.floor(
+                    (distancenext % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+                  );
+                  var minutes = Math.floor(
+                    (distancenext % (1000 * 60 * 60)) / (1000 * 60)
+                  );
+                  var seconds = Math.floor((distancenext % (1000 * 60)) / 1000);
+                  // Display the result in the element
+                  document.getElementById("menuju").innerHTML = "MENUJU IMSAK";
+                  document.getElementById("hours").innerHTML = (
+                    "0" + hours
+                  ).slice(-2);
+                  document.getElementById("minutes").innerHTML = (
+                    "0" + minutes
+                  ).slice(-2);
+                  document.getElementById("seconds").innerHTML = (
+                    "0" + seconds
+                  ).slice(-2);
+                  // If the count down is finished, write some text
+                } else if (distance > 0) {
+                  clearInterval(z);
+                }
+              }, 1000);
+            }
+          }, 1000);
+        }
+      }, 1000);
     </script>
   </body>
 </html>
