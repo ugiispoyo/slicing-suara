@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ramadhan</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link href="./assets/css/style.css" rel="stylesheet" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#1D55A0",
+              junglegreen: "#27B092",
+              sandstorm: "#F4CE3F",
+              water: "#D6F5FC",
+              urobilin: "#E4BC27",
+              quicksilver: "#A6A6A6",
+              eerieblack: "#1E1E1E",
+            },
+            screens: {
+              "2xs": "390px",
+              // => @media (min-width: 390px) { ... }
+
+              xs: "480px",
+              // => @media (min-width: 480px) { ... }
+
+              sm: "640px",
+              // => @media (min-width: 640px) { ... }
+
+              md: "768px",
+              // => @media (min-width: 768px) { ... }
+
+              lg: "1024px",
+              // => @media (min-width: 1024px) { ... }
+
+              xl: "1280px",
+              // => @media (min-width: 1280px) { ... }
+
+              "2xl": "1536px",
+              // => @media (min-width: 1536px) { ... }
+            },
+          },
+        },
+      };
+    </script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <style>
+      .swiper .swiper-pagination .swiper-pagination-bullet {
+        background: #fff;
+      }
+      .count-down {
+        color: #fff;
+        font-size: 40px;
+        font-weight: 700;
+        z-index: 5;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .info {
+        color: #fff;
+        font-size: 16px;
+        top: 58%;
+        font-weight: 400;
+        display: block;
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav
+      class="bg-white fixed flex items-center justify-center w-full z-[49] border-b border-[#f1f1f1]"
+    >
+      <div
+        class="w-full h-[70px] max-w-[770px] flex max-md:flex-wrap items-center justify-center max-md:justify-between md:px-4 relative"
+      >
+        <a
+          href="/home-without-brand.html"
+          class="md:w-full h-[70px] flex items-center md:max-w-[150px]"
+        >
+          <img
+            src="./assets/icons/home.svg"
+            class="w-[27px] h-auto max-md:ml-4"
+          />
+        </a>
+        <a
+          href="#"
+          class="hidden max-md:flex max-md:items-center max-md:mr-4 absolute max-md:right-[50px]"
+        >
+          <img
+            src="./assets/icons/search.svg"
+            class="w-[27px] h-auto max-md:w-[20px]"
+          />
+        </a>
+        <button
+          data-collapse-toggle="navbar-default"
+          type="button"
+          class="inline-flex h-[70px] flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden max-md:mr-4"
+          aria-controls="navbar-default"
+          aria-expanded="false"
+        >
+          <span class="sr-only">Open main menu</span>
+          <svg
+            class="w-5 h-5"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 17 14"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M1 1h15M1 7h15M1 13h15"
+            />
+          </svg>
+        </button>
+        <div
+          class="hidden w-full md:block bg-white max-md:shadow-md"
+          id="navbar-default"
+        >
+          <ul
+            class="text-primary capitalize font-bold w-full text-base flex flex-col p-4 md:p-0 rounded-lg md:flex-row"
+          >
+            <li class="w-full max-w-[150px] max-md:mb-4">
+              <!-- url "/home-without-brand.html" nanti lu sesuain lagi aja ya, tinggal tambahin aja di belakang #kebaikan -->
+              <a href="/home-without-brand.html#kebaikan"> kebaikan </a>
+            </li>
+            <li class="w-full max-w-[150px] max-md:mb-4">
+              <!-- url "/home-without-brand.html" nanti lu sesuain lagi aja ya, tinggal tambahin aja di belakang #hiburan -->
+              <a href="/home-without-brand.html#hiburan"> Hiburan </a>
+            </li>
+            <li class="w-full max-w-[150px] max-md:mb-4">
+              <!-- url "/home-without-brand.html" nanti lu sesuain lagi aja ya, tinggal tambahin aja di belakang #komunitas -->
+              <a href="/home-without-brand.html#komunitas"> Communitimes </a>
+            </li>
+            <li
+              class="w-full max-w-[150px] flex justify-end max-md:justify-start max-md:mb-4 max-md:hidden"
+            >
+              <a href="#">
+                <img src="./assets/icons/search.svg" class="w-[27px] h-auto" />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="w-full relative bg-[#EDEDED]">
+      <div class="pt-[70px]">
+        <div
+          class="w-full min-h-[400px] flex justify-between max-lg:flex-col pt-[50px]"
+        >
+          <div
+            class="w-[40%] max-lg:w-full flex justify-center flex-col items-center relative"
+          >
+            <img
+              src="./assets/images/home/banner-header-v3.svg"
+              class="w-full mb-[30px]"
+            />
+            <!-- Countdown -->
+            <div class="absolute mt-[100px]">
+              <div
+                style="
+                  width: 258px;
+                  height: 115px;
+                  position: relative;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  flex-direction: column;
+                "
+              >
+                <img
+                  src="./assets/images/home/bg-countdown-v3.svg"
+                  style="
+                    position: absolute;
+                    object-fit: cover;
+                    width: 100%;
+                    height: 100%;
+                    inset: 0px;
+                  "
+                />
+                <div style="position: absolute; top: 5px">
+                  <div
+                    style="
+                      display: flex;
+                      flex-direction: column;
+                      align-items: center;
+                      justify-content: center;
+                    "
+                  >
+                    <span id="menuju" class="info">-</span>
+                    <div>
+                      <span class="count-down" id="hours">00</span>
+                      <span class="count-down">:</span>
+                      <span class="count-down" id="minutes">00</span>
+                      <span class="count-down">:</span>
+                      <span class="count-down" id="seconds">00</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <img
+              src="./assets/images/home/banner-header-v3-1.svg"
+              class="w-full"
+            />
+          </div>
+          <div
+            class="w-[60%] max-lg:w-full px-8 max-xs:px-5 max-lg:mt-10 lg:border-l-[0.5px] border-[#9B9B9B] mb-[50px]"
+          >
+            <!-- Slider main container -->
+            <div
+              class="swiper w-[100%] min-h-[500px] pb-[50px]"
+              data-swiper-autoplay="2000"
+              pagination="true"
+            >
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                  <div class="flex w-full justify-between max-sm:flex-col">
+                    <div class="w-[48%] max-sm:w-full max-sm:my-3">
+                      <span
+                        class="bg-[#E23C5C] py-1 px-3 uppercase text-white text-sm font-[500]"
+                        >Kabar</span
+                      >
+                      <img
+                        src="./assets/images/home/news-banner.svg"
+                        class="w-full h-auto my-4"
+                        alt="newx"
+                      />
+                      <span class="block text-sm text-[#A5A5A5] mb-2"
+                        >13:00 | 25 April 2023</span
+                      >
+                      <a href="#">
+                        <h2
+                          class="text-2xl font-bold text-primary line-clamp-3"
+                        >
+                          Jadi Tradisi Lebaran, Ini Makna Halal Bihalal Dalam
+                          Pandangan Islam
+                        </h2>
+                      </a>
+                      <p class="text-[#2F2F2F] text-md mt-2 line-clamp-4">
+                        Setelah Hari Raya Idul Fitri, pasti tidak asing dengan
+                        acara halal bihalal. Acara ini biasa dilakukan dalam
+                        rangka berkumpul baik bersama teman, keluarga, kerabat
+                        untuk bermaaf-maafan.
+                      </p>
+                    </div>
+                    <div class="w-[48%] max-sm:w-full max-sm:my-3">
+                      <span
+                        class="bg-[#E23C5C] py-1 px-3 uppercase text-white text-sm font-[500]"
+                        >Kabar</span
+                      >
+                      <img
+                        src="./assets/images/home/news-banner.svg"
+                        class="w-full h-auto my-4"
+                        alt="newx"
+                      />
+                      <span class="block text-sm text-[#A5A5A5] mb-2"
+                        >13:00 | 25 April 2023</span
+                      >
+                      <a href="#">
+                        <h2
+                          class="text-2xl font-bold text-primary line-clamp-3"
+                        >
+                          Jadi Tradisi Lebaran, Ini Makna Halal Bihalal Dalam
+                          Pandangan Islam
+                        </h2>
+                      </a>
+                      <p class="text-[#2F2F2F] text-md mt-2 line-clamp-4">
+                        Setelah Hari Raya Idul Fitri, pasti tidak asing dengan
+                        acara halal bihalal. Acara ini biasa dilakukan dalam
+                        rangka berkumpul baik bersama teman, keluarga, kerabat
+                        untuk bermaaf-maafan.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="flex w-full justify-between max-sm:flex-col">
+                    <div class="w-[48%] max-sm:w-full max-sm:my-3">
+                      <span
+                        class="bg-[#E23C5C] py-1 px-3 uppercase text-white text-sm font-[500]"
+                        >Kabar</span
+                      >
+                      <img
+                        src="./assets/images/home/news-banner.svg"
+                        class="w-full h-auto my-4"
+                        alt="newx"
+                      />
+                      <span class="block text-sm text-[#A5A5A5] mb-2"
+                        >13:00 | 25 April 2023</span
+                      >
+                      <a href="#">
+                        <h2
+                          class="text-2xl font-bold text-primary line-clamp-3"
+                        >
+                          Jadi Tradisi Lebaran, Ini Makna Halal Bihalal Dalam
+                          Pandangan Islam
+                        </h2>
+                      </a>
+                      <p class="text-[#2F2F2F] text-md mt-2 line-clamp-4">
+                        Setelah Hari Raya Idul Fitri, pasti tidak asing dengan
+                        acara halal bihalal. Acara ini biasa dilakukan dalam
+                        rangka berkumpul baik bersama teman, keluarga, kerabat
+                        untuk bermaaf-maafan.
+                      </p>
+                    </div>
+                    <div class="w-[48%] max-sm:w-full max-sm:my-3">
+                      <span
+                        class="bg-[#E23C5C] py-1 px-3 uppercase text-white text-sm font-[500]"
+                        >Kabar</span
+                      >
+                      <img
+                        src="./assets/images/home/news-banner.svg"
+                        class="w-full h-auto my-4"
+                        alt="newx"
+                      />
+                      <span class="block text-sm text-[#A5A5A5] mb-2"
+                        >13:00 | 25 April 2023</span
+                      >
+                      <a href="#">
+                        <h2
+                          class="text-2xl font-bold text-primary line-clamp-3"
+                        >
+                          Jadi Tradisi Lebaran, Ini Makna Halal Bihalal Dalam
+                          Pandangan Islam
+                        </h2>
+                      </a>
+                      <p class="text-[#2F2F2F] text-md mt-2 line-clamp-4">
+                        Setelah Hari Raya Idul Fitri, pasti tidak asing dengan
+                        acara halal bihalal. Acara ini biasa dilakukan dalam
+                        rangka berkumpul baik bersama teman, keluarga, kerabat
+                        untuk bermaaf-maafan.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="flex w-full justify-between max-sm:flex-col">
+                    <div class="w-[48%] max-sm:w-full max-sm:my-3">
+                      <span
+                        class="bg-[#E23C5C] py-1 px-3 uppercase text-white text-sm font-[500]"
+                        >Serbaserbi</span
+                      >
+                      <img
+                        src="./assets/images/home/news-banner.svg"
+                        class="w-full h-auto my-4"
+                        alt="newx"
+                      />
+                      <span class="block text-sm text-[#A5A5A5] mb-2"
+                        >13:00 | 25 April 2023</span
+                      >
+                      <a href="#">
+                        <h2
+                          class="text-2xl font-bold text-primary line-clamp-3"
+                        >
+                          Jadi Tradisi Lebaran, Ini Makna Halal Bihalal Dalam
+                          Pandangan Islam
+                        </h2>
+                      </a>
+                      <p class="text-[#2F2F2F] text-md mt-2 line-clamp-4">
+                        Setelah Hari Raya Idul Fitri, pasti tidak asing dengan
+                        acara halal bihalal. Acara ini biasa dilakukan dalam
+                        rangka berkumpul baik bersama teman, keluarga, kerabat
+                        untuk bermaaf-maafan.
+                      </p>
+                    </div>
+                    <div class="w-[48%] max-sm:w-full max-sm:my-3">
+                      <span
+                        class="bg-[#E23C5C] py-1 px-3 uppercase text-white text-sm font-[500]"
+                        >Kabar</span
+                      >
+                      <img
+                        src="./assets/images/home/news-banner.svg"
+                        class="w-full h-auto my-4"
+                        alt="newx"
+                      />
+                      <span class="block text-sm text-[#A5A5A5] mb-2"
+                        >13:00 | 25 April 2023</span
+                      >
+                      <a href="#">
+                        <h2
+                          class="text-2xl font-bold text-primary line-clamp-3"
+                        >
+                          Jadi Tradisi Lebaran, Ini Makna Halal Bihalal Dalam
+                          Pandangan Islam
+                        </h2>
+                      </a>
+                      <p class="text-[#2F2F2F] text-md mt-2 line-clamp-4">
+                        Setelah Hari Raya Idul Fitri, pasti tidak asing dengan
+                        acara halal bihalal. Acara ini biasa dilakukan dalam
+                        rangka berkumpul baik bersama teman, keluarga, kerabat
+                        untuk bermaaf-maafan.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Kebaikan -->
+    <section class="w-full pt-[20px]" id="kebaikan">
+      <div
+        class="bg-white w-full py-[20px] sm:px-[20px] w-full flex justify-center items-center flex-col pb-5"
+      >
+        <span
+          class="text-center block sm:text-sm text-eerieblack font-bold text-xs mb-2 pt-[30px] max-sm:pt-[20px]"
+          >#BersuaRamadhanBersama</span
+        >
+        <img src="./assets/images/home/kebaikan.svg" class="h-[60px] px-5" />
+        <div
+          class="px-4 min-h-[200px] w-full items-center max-lg:justify-center max-w-[1050px] flex flex-wrap mt-4 relative"
+        >
+          <div
+            class="md:min-h-[320px] max-md:min-h-[260px] max-sm:min-h-auto p-4 w-full sm:max-w-[44%] lg:max-w-[30%] m-4 max-sm:mx-2 max-xs:mx-0 rounded-[10px] bg-primary"
+          >
+            <a
+              href="#"
+              class="flex w-full flex-col items-center justify-center max-xs:min-h-[250px]"
+            >
+              <h3 class="capitalize text-white sm:text-2xl text-base font-bold">
+                yuk ngaji
+              </h3>
+              <img
+                src="./assets/images/home/kebaikan-ngaji.svg"
+                class="md:w-[200px] w-[120px] my-2"
+              />
+              <p class="text-center text-white sm:text-sm text-xs">
+                Kumpulan doa-doa harian yang bisa kamu kepoin selama ramadan
+              </p>
+            </a>
+          </div>
+
+          <div
+            class="md:min-h-[320px] max-md:min-h-[260px] max-sm:min-h-auto p-4 w-full sm:max-w-[44%] lg:max-w-[30%] m-4 max-sm:mx-2 max-xs:mx-0 rounded-[10px] bg-primary"
+          >
+            <a
+              href="#"
+              class="flex w-full flex-col items-center justify-center max-xs:min-h-[250px]"
+            >
+              <h3 class="capitalize text-white sm:text-2xl text-base font-bold">
+                tang ting tung
+              </h3>
+              <img
+                src="./assets/images/home/kebaikan-zakat.svg"
+                class="md:w-[200px] w-[140px] my-2"
+              />
+              <p class="text-center text-white sm:text-sm text-xs">
+                Bikin lebih sempurna kebaikan ramadhan lewat bayar zakat. Yuk,
+                mari kita hitung
+              </p>
+            </a>
+          </div>
+
+          <div
+            class="relative md:min-h-[320px] max-md:min-h-[260px] overflow-hidden max-h-[290px] max-sm:min-h-auto p-4 w-full sm:max-w-[44%] lg:max-w-[30%] m-4 max-sm:mx-2 max-xs:mx-0 rounded-[10px] bg-primary"
+          >
+            <img
+              src="./assets/images/home/bg-bri.svg"
+              style="
+                position: absolute;
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
+                inset: 0px;
+              "
+              alt="bg"
+            />
+            <a
+              href="#"
+              class="flex w-full flex-col items-center justify-center max-xs:min-h-[250px] relative z-[2]"
+            >
+              <h3 class="capitalize text-white sm:text-2xl text-base font-bold">
+                reminder
+              </h3>
+              <img
+                src="./assets/images/home/kebaikan-reminder.svg"
+                class="md:w-[130px] w-[90px] my-2"
+              />
+              <img
+                src="./assets/images/home/logo-bri-putih.svg"
+                class="h-[25px] my-2"
+              />
+              <p class="text-center text-white sm:text-sm text-xs">
+                Panduan jadwal sholat, buka puasa, dan sahur selama ramadan yang
+                bisa kamu download secara gratisan
+              </p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hiburan -->
+    <section class="w-full" id="hiburan">
+      <div
+        class="bg-[#CACACA4D] w-full flex justify-center items-center pb-[40px] flex-col"
+      >
+        <span
+          class="text-center block sm:text-sm text-primary font-bold text-xs mb-2 pt-[30px] max-sm:pt-[20px]"
+          >#BersuaRamadhanBersama</span
+        >
+        <img
+          src="./assets/images/home/hiburan-blue.svg"
+          class="h-[60px] px-5"
+        />
+        <div
+          class="px-4 min-h-[200px] w-full items-center max-lg:justify-center max-w-[1050px] flex flex-wrap mt-4 relative"
+        >
+          <div
+            class="py-4 px-4 w-full sm:max-w-[49%] max-sm:mx-2 max-xs:mx-0 max-sm:px-2 rounded-[10px]"
+          >
+            <a
+              href="#"
+              class="flex w-full flex-col items-center justify-center max-xs:min-h-[250px]"
+            >
+              <img
+                src="./assets/images/home/hiburan-tontonan.svg"
+                class="w-full h-auto"
+              />
+            </a>
+          </div>
+          <div
+            class="py-4 px-4 w-full sm:max-w-[49%] max-sm:mx-2 max-xs:mx-0 max-sm:px-2 rounded-[10px]"
+          >
+            <a
+              href="#"
+              class="flex w-full flex-col items-center justify-center max-xs:min-h-[250px]"
+            >
+              <img
+                src="./assets/images/home/hiburan-kurma.svg"
+                class="w-full h-auto"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Komunitas -->
+    <section class="w-full" id="komunitas">
+      <div class="bg-sandstorm w-full sm:px-[20px]">
+        <div
+          class="bg-[url('./assets/images/home/bg-kebaikan.svg')] bg-cover bg-repeat w-full flex justify-center items-center flex-col pb-5"
+        >
+          <span
+            class="text-center text-eerieblack block sm:text-sm font-bold text-xs mb-2 pt-[40px] max-sm:pt-[20px]"
+            >#BersuaRamadhanBersama</span
+          >
+          <img src="./assets/images/home/komunitas.svg" class="h-[60px] px-5" />
+          <div
+            class="px-4 min-h-[200px] w-full items-center justify-center max-lg:justify-center max-w-[1050px] flex flex-wrap mt-[40px] relative"
+          >
+            <div
+              class="py-4 px-4 w-full lg:max-w-[100%] max-sm:mx-2 max-xs:mx-0 max-sm:px-2"
+            >
+              <div
+                class="bg-primary min-h-[250px] w-full flex items-center rounded-[10px] lg:pr-4 lg:py-4 relative justify-end max-lg:flex-col max-lg:px-5"
+              >
+                <img
+                  src="./assets/images/home/tgif.svg"
+                  class="h-[300px] w-auto lg:absolute lg:left-[0] lg:bottom-[0] max-lg:relative max-lg:top-[-60px] z-[2]"
+                />
+                <div
+                  class="flex flex-col lg:max-w-[570px] 2xs:mb-5 relative max-2xs:top-[-30px]"
+                >
+                  <h3
+                    class="uppercase text-[#E4BC27] sm:text-[26px] text-base mb-2 font-bold leading-[30px]"
+                  >
+                    TGIF
+                    <span class="sm:text-[20px] text-sm font-[300]"
+                      >(TAKJIL GRATIS IN FRIDAY)</span
+                    >
+                  </h3>
+                  <p class="text-white text-sm">
+                    Seru-seruan bareng komunitas serta berbagi hiburan selama
+                    ramadhan
+                    <br />
+                    <br />
+                    Lokasi : 4 Titik (Public Space) Konten: Ngamen, Ngaji,
+                    Ngabuburit (Gambar Berbagi Takjil & Diskusi)
+                  </p>
+                  <a
+                    href="#"
+                    class="text-primary text-sm bg-sandstorm rounded-[10px] py-2 px-5 uppercase font-bold mt-4 max-w-[100px] text-center block"
+                  >
+                    detail
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="w-full">
+      <div
+        class="w-full bg-primary flex justify-center items-center min-h-[70px] max-sm:py-5"
+      >
+        <div
+          class="w-full max-w-[1000px] px-4 flex justify-between max-sm:flex-col"
+        >
+          <ul
+            class="text-white text-xs font-bold capitalize flex sm:items-center max-sm:flex-col"
+          >
+            <li class="sm:border-r border-white pr-2 mr-2 max-sm:mb-2">
+              <a href="#"> Redaksi </a>
+            </li>
+            <li class="sm:border-r border-white pr-2 mr-2 max-sm:mb-2">
+              <a href="#"> kontak </a>
+            </li>
+            <li class="sm:border-r border-white pr-2 mr-2 max-sm:mb-2">
+              <a href="#"> tentang kami </a>
+            </li>
+            <li class="sm:border-r border-white pr-2 mr-2 max-sm:mb-2">
+              <a href="#"> karir </a>
+            </li>
+            <li class="sm:border-r border-white pr-2 mr-2 max-sm:mb-2">
+              <a href="#"> pedoman media siber </a>
+            </li>
+            <li>
+              <a href="#"> site map </a>
+            </li>
+          </ul>
+          <ul class="text-white text-xs font-bold capitalize flex max-sm:mt-6">
+            <li class="mr-2">
+              <a href="#">
+                <img src="./assets/icons/ig.svg" class="h-[23px]" />
+              </a>
+            </li>
+            <li class="mr-2">
+              <a href="#">
+                <img src="./assets/icons/tw.svg" class="h-[23px]"
+              /></a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="./assets/icons/titktok.svg" class="h-[23px]"
+              /></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="bg-white w-full justify-center flex items-center h-[80px]">
+        <p class="text-black text-xs">
+          © 2023 suara.com - All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper(".swiper", {
+        // Optional parameters
+        direction: "horizontal",
+        loop: true,
+        autoplay: {
+          delay: 3000,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+        },
+      });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.10/dayjs.min.js"></script>
+    <script
+      src="https://assets.suara.com/desktop/js/praytimes.js?=v10"
+      type="text/javascript"
+    ></script>
+    <script type="text/javascript">
+      prayTimes.tune({
+        imsak: 2,
+        subuh: 2,
+        dhuhur: 4,
+        ashar: 2,
+        maghrib: 3,
+        isya: 2,
+      });
+      var geo = [-6.211544, 106.845172, 10.22]; //jkt
+      var timezone = +7;
+      var date = new Date(); // today
+      var times = prayTimes.getTimes(date, geo, timezone);
+      var timenow = date.getHours() + ":" + date.getMinutes();
+
+      var imsak = "imsak";
+      var subuh = "subuh";
+      var dhuhur = "dhuhur";
+      var ashar = "ashar";
+      var magrib = "maghrib";
+      var isya = "isya";
+
+      var imsaktime = times[imsak.toLowerCase()];
+
+      var subuhtime = times[subuh.toLowerCase()];
+      var dhuhurtime = times[dhuhur.toLowerCase()];
+      var ashartime = times[ashar.toLowerCase()];
+      var magribtime = times[magrib.toLowerCase()];
+      var isyatime = times[isya.toLowerCase()];
+
+      var datenow = dayjs().format("MMMM DD, YYYY");
+
+      // var magribtime = "16:10";
+      // Set the date we're counting down to
+      var countDownDatemagrib = new Date(
+        datenow + " " + magribtime + ":00"
+      ).getTime();
+      var countDownDateimsak = new Date(
+        datenow + " " + imsaktime + ":00"
+      ).getTime();
+      var countDownDateDzuhur = new Date(
+        datenow + " " + dhuhurtime + ":00"
+      ).getTime();
+      var countDownDateimsaknextday = new Date(
+        dayjs().add(1, "days") + " " + imsaktime + ":00"
+      ).getTime();
+      // Update the count down every 1 second
+      //interval imsak 1
+      var x = setInterval(function () {
+        // Get today's date and time
+        var now = new Date().getTime();
+        // Find the distance between now and the count down date
+        var distance = countDownDateimsak - now;
+        if (distance >= 0) {
+          // Time calculations for days, hours, minutes and seconds
+          // var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+          var hours = Math.floor(
+            (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+          );
+          var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+          var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+          // Display the result in the element
+          document.getElementById("menuju").innerHTML =
+            "Maghrib Untuk Daerah Jakarta & Sekitarnya";
+          document.getElementById("hours").innerHTML = ("0" + hours).slice(-2);
+          document.getElementById("minutes").innerHTML = ("0" + minutes).slice(
+            -2
+          );
+          document.getElementById("seconds").innerHTML = ("0" + seconds).slice(
+            -2
+          );
+          // If the count down is finished, write some text
+        } else if (distance < 0) {
+          clearInterval(x);
+          /* ======== interval Dzuhur ====== */
+          var y = setInterval(function () {
+            // Get today's date and time
+            var now = new Date().getTime();
+            // Find the distance between now and the count down date
+            var distancedzuhur = countDownDateDzuhur - now;
+            if (distancedzuhur >= 0) {
+              // Time calculations for days, hours, minutes and seconds
+              // var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+              var hours = Math.floor(
+                (distancedzuhur % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+              );
+              var minutes = Math.floor(
+                (distancedzuhur % (1000 * 60 * 60)) / (1000 * 60)
+              );
+              var seconds = Math.floor((distancedzuhur % (1000 * 60)) / 1000);
+              // Display the result in the element
+              document.getElementById("menuju").innerHTML =
+                "Dzuhur Untuk Daerah" + "<br />" + " Jakarta & Sekitarnya";
+              document.getElementById("hours").innerHTML = ("0" + hours).slice(
+                -2
+              );
+              document.getElementById("minutes").innerHTML = (
+                "0" + minutes
+              ).slice(-2);
+              document.getElementById("seconds").innerHTML = (
+                "0" + seconds
+              ).slice(-2);
+              // If the count down is finished, write some text
+            } else if (distancedzuhur < 0) {
+              clearInterval(y);
+              /* ======== interval Magrib ====== */
+              var y = setInterval(function () {
+                // Get today's date and time
+                var now = new Date().getTime();
+                // Find the distance between now and the count down date
+                var distancebuka = countDownDatemagrib - now;
+                if (distancebuka >= 0) {
+                  // Time calculations for days, hours, minutes and seconds
+                  // var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                  var hours = Math.floor(
+                    (distancebuka % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+                  );
+                  var minutes = Math.floor(
+                    (distancebuka % (1000 * 60 * 60)) / (1000 * 60)
+                  );
+                  var seconds = Math.floor((distancebuka % (1000 * 60)) / 1000);
+                  // Display the result in the element
+                  document.getElementById("menuju").innerHTML =
+                    "Maghrib Untuk Daerah" + "<br />" + "Jakarta & Sekitarnya";
+                  document.getElementById("hours").innerHTML = (
+                    "0" + hours
+                  ).slice(-2);
+                  document.getElementById("minutes").innerHTML = (
+                    "0" + minutes
+                  ).slice(-2);
+                  document.getElementById("seconds").innerHTML = (
+                    "0" + seconds
+                  ).slice(-2);
+                  // If the count down is finished, write some text
+                } else if (distancebuka < 0) {
+                  clearInterval(y);
+                  //interval magrib next day
+                  var z = setInterval(function () {
+                    // Get today's date and time
+                    var now = new Date().getTime();
+                    // Find the distance between now and the count down date
+                    var distancenext = countDownDateimsaknextday - now;
+                    if (distancenext >= 0) {
+                      // Time calculations for days, hours, minutes and seconds
+                      // var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                      var hours = Math.floor(
+                        (distancenext % (1000 * 60 * 60 * 24)) /
+                          (1000 * 60 * 60)
+                      );
+                      var minutes = Math.floor(
+                        (distancenext % (1000 * 60 * 60)) / (1000 * 60)
+                      );
+                      var seconds = Math.floor(
+                        (distancenext % (1000 * 60)) / 1000
+                      );
+                      // Display the result in the element
+                      document.getElementById("menuju").innerHTML =
+                        "Imsyak Untuk Daerah" +
+                        "<br />" +
+                        "Jakarta & Sekitarnya";
+                      document.getElementById("hours").innerHTML = (
+                        "0" + hours
+                      ).slice(-2);
+                      document.getElementById("minutes").innerHTML = (
+                        "0" + minutes
+                      ).slice(-2);
+                      document.getElementById("seconds").innerHTML = (
+                        "0" + seconds
+                      ).slice(-2);
+                      // If the count down is finished, write some text
+                    } else if (distance > 0) {
+                      clearInterval(z);
+                    }
+                  }, 1000);
+                }
+              }, 1000);
+            }
+          }, 1000);
+        }
+      }, 1000);
+    </script>
+  </body>
+</html>
