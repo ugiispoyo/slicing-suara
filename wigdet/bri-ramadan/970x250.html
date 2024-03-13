@@ -697,7 +697,7 @@
   window.onload = function () {
     pilih_jadwal();
     animationStart();
-    document.getElementById("hijri-date").innerHTML = `${moment().format(
+    document.getElementById("hijri-date").innerHTML = `${moment().subtract(1, 'days').format(
       "iD iMMMM iYYYY"
     )} H`;
     document.getElementById("masehi-date").innerHTML = `${moment().format(

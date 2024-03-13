@@ -878,7 +878,7 @@
         var bulan = currentDate.getMonth();
 
         while (date < endDate) {
-          var hijri = moment(date).format("iD iMMMM iYYYY");
+          var hijri = moment(date).subtract(1, "days").format("iD iMMMM iYYYY");
           if (x % 2 != 0) {
             clas = "TabListJadwal bg1";
           } else {

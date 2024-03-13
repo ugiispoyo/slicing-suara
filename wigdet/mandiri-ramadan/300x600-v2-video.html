@@ -140,8 +140,9 @@
     datenow + " " + dhuhurtime + ":00"
   ).getTime();
   var countDownDateimsaknextday = new Date(
-    dayjs().add(1, "days") + " " + imsaktime + ":00"
+    dayjs().add(1, "days").format("MMMM DD, YYYY") + " " + imsaktime + ":00"
   ).getTime();
+
   // Update the count down every 1 second
   //interval imsak 1
   var x = setInterval(function () {
@@ -196,7 +197,7 @@
         } else if (distancedzuhur < 0) {
           clearInterval(y);
           /* ======== interval Magrib ====== */
-          var y = setInterval(function () {
+          var w = setInterval(function () {
             // Get today's date and time
             var now = new Date().getTime();
             // Find the distance between now and the count down date
@@ -225,7 +226,7 @@
               ).slice(-2);
               // If the count down is finished, write some text
             } else if (distancebuka < 0) {
-              clearInterval(y);
+              clearInterval(w);
               //interval magrib next day
               var z = setInterval(function () {
                 // Get today's date and time
