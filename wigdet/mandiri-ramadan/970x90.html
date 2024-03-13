@@ -130,7 +130,7 @@
     datenow + " " + dhuhurtime + ":00"
   ).getTime();
   var countDownDateimsaknextday = new Date(
-    dayjs().add(1, "days") + " " + imsaktime + ":00"
+    dayjs().add(1, "days").format("MMMM DD, YYYY") + " " + imsaktime + ":00"
   ).getTime();
   // Update the count down every 1 second
   //interval imsak 1

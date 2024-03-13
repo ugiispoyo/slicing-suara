@@ -92,7 +92,7 @@
   var isyatime = times[isya.toLowerCase()];
 
   var datenow = dayjs().format("MMMM DD, YYYY");
-  
+
   // var magribtime = "16:10";
   // Set the date we're counting down to
   var countDownDatemagrib = new Date(
@@ -102,7 +102,7 @@
     datenow + " " + imsaktime + ":00"
   ).getTime();
   var countDownDateimsaknextday = new Date(
-    dayjs().add(1, "days") + " " + imsaktime + ":00"
+    dayjs().add(1, "days").format("MMMM DD, YYYY") + " " + imsaktime + ":00"
   ).getTime();
   // Update the count down every 1 second
   //interval imsak 1
